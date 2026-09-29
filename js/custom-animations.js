@@ -100,7 +100,7 @@ header.classList.remove("gsap-header");
 header.classList.remove("pin-active");
 if (window.innerWidth > 768) {
 header_main_logo.forEach((logo) => {
-logo.setAttribute("src", "assets/images/logo/great_value.png");
+logo.setAttribute("src", "assets/images/logo/great-value-211.webp");
 });
 }
 if (window.innerWidth > 768) {

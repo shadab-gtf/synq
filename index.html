@@ -26,8 +26,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
   <!-- Hero image (LCP) -->
-  <link rel="preload" as="image" href="assets/images/hero/banner_img-914.webp"
-    imagesrcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
+  <link rel="preload" as="image" href="assets/images/hero/banner_img-914-opt.webp"
+    imagesrcset="assets/images/hero/banner_img-480-opt.webp 480w, assets/images/hero/banner_img-828-opt.webp 828w, assets/images/hero/banner_img-914-opt.webp 914w"
     imagesizes="(max-width: 767px) 100vw, 50vw" fetchpriority="high" />
 
   <!-- Google Fonts (non-blocking) -->
@@ -288,7 +288,9 @@
 
       <!-- <img src="assets/images/logo/yatharth.png" alt="Yatharth" class="header-logo yatharth_main_logo light-logo d-none"> -->
 
-      <img src="assets/images/logo/yatharth_dark.webp" alt="Yatharth"
+      <img src="assets/images/logo/yatharth-dark-123.webp"
+        srcset="assets/images/logo/yatharth-dark-123.webp 123w, assets/images/logo/yatharth-dark-q60.webp 250w"
+        sizes="123px" alt="Yatharth"
         class="header-logo yatharth_main_logo dark-logo" />
     </div>
 
@@ -334,7 +336,9 @@
       <div class="row">
         <div class="col-6 d-flex align-items-start">
           <div class="_logo">
-            <img src="assets/images/logo/great_value.png" alt="Great Value"
+            <img src="assets/images/logo/great-value-211.webp"
+              srcset="assets/images/logo/great-value-211.webp 211w, assets/images/logo/great-value-300.webp 300w"
+              sizes="211px" alt="Great Value"
               class="header-logo gvr_logo main_logo light-logo d-none d-md-block" />
 
             <img src="assets/images/logo/great_value_dark.webp" alt="Great Value"
@@ -342,10 +346,14 @@
 
             <div class="header-divider"></div>
 
-            <img src="assets/images/logo/yatharth.png" alt="Yatharth"
+            <img src="assets/images/logo/yatharth-light-157.webp"
+              srcset="assets/images/logo/yatharth-light-157.webp 157w, assets/images/logo/yatharth-light.webp 314w"
+              sizes="157px" alt="Yatharth"
               class="header-logo yatharth_main_logo light-logo d-none d-md-block" />
 
-            <img src="assets/images/logo/yatharth_dark.webp" alt="Yatharth"
+            <img src="assets/images/logo/yatharth-dark-123.webp"
+              srcset="assets/images/logo/yatharth-dark-123.webp 123w, assets/images/logo/yatharth-dark-q60.webp 250w"
+              sizes="123px" alt="Yatharth"
               class="header-logo yatharth_main_logo dark-logo d-md-none" />
           </div>
         </div>
@@ -392,8 +400,8 @@
           <div class="container-fluid px-0">
             <div class="row">
               <div class="col-md-6 hero-left-col">
-                <img src="assets/images/hero/banner_img-914.webp"
-                  srcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
+                <img src="assets/images/hero/banner_img-914-opt.webp"
+                  srcset="assets/images/hero/banner_img-480-opt.webp 480w, assets/images/hero/banner_img-828-opt.webp 828w, assets/images/hero/banner_img-914-opt.webp 914w"
                   sizes="(max-width: 767px) 100vw, 50vw" width="914" height="917" fetchpriority="high"
                   alt="Hero Left Image" class="hero-left-image" />
               </div>
@@ -441,7 +449,7 @@
 
                       <picture>
                         <source media="(max-width: 767px)" srcset="assets/images/pay_40_sm.webp">
-                        <img loading="lazy" decoding="async" class="img-fluid pay_patch" src="assets/images/pay_40.webp" alt="" />
+                        <img loading="lazy" decoding="async" class="img-fluid pay_patch" src="assets/images/pay_40-opt.webp" alt="" />
                       </picture>
                     </div>
 
@@ -727,7 +735,12 @@
 
           <picture>
             <source media="(max-width: 767px)" srcset="assets/images/gallery/bg_sm.webp">
-            <img loading="lazy" decoding="async" src="assets/images/gallery/bg.webp" alt="Gallery Background" class="gallery-bg">
+            <source type="image/avif"
+              srcset="assets/images/gallery/bg-1400.avif 1400w, assets/images/gallery/bg-1622.avif 1622w"
+              sizes="100vw">
+            <img loading="lazy" decoding="async" src="assets/images/gallery/bg-1400-opt.webp"
+              srcset="assets/images/gallery/bg-768.webp 768w, assets/images/gallery/bg-1400-opt.webp 1400w, assets/images/gallery/bg.webp 1622w"
+              sizes="100vw" alt="Gallery Background" class="gallery-bg">
           </picture>
 
           <!-- <img src="assets/images/gallery/flower.png" alt="Gallery Flower" class="gallery-flower"> -->
@@ -759,7 +772,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/1.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/1.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/1-768.webp"
+                            srcset="assets/images/gallery/desk/1-480.webp 480w, assets/images/gallery/desk/1-768.webp 768w, assets/images/gallery/desk/1-1152.webp 1152w, assets/images/gallery/desk/1.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/1.webp" alt="gallery image"
@@ -779,7 +794,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/2.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/2.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/2-768.webp"
+                            srcset="assets/images/gallery/desk/2-480.webp 480w, assets/images/gallery/desk/2-768.webp 768w, assets/images/gallery/desk/2-1152.webp 1152w, assets/images/gallery/desk/2.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/2.webp" alt="gallery image"
@@ -799,8 +816,15 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/3.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/3.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
+                          <picture>
+                            <source type="image/avif"
+                              srcset="assets/images/gallery/desk/3-480.avif 480w, assets/images/gallery/desk/3-768.avif 768w, assets/images/gallery/desk/3-1152.avif 1152w, assets/images/gallery/desk/3-1500.avif 1500w"
+                              sizes="auto, 75vw" />
+                            <img loading="lazy" decoding="async" src="assets/images/gallery/desk/3-768.webp"
+                              srcset="assets/images/gallery/desk/3-480.webp 480w, assets/images/gallery/desk/3-768.webp 768w, assets/images/gallery/desk/3-1152.webp 1152w, assets/images/gallery/desk/3.webp 1500w"
+                              sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
+                              class="img-fluid gallery_img d-none d-md-block" />
+                          </picture>
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/3.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
@@ -819,7 +843,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/4.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/4.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/4-768.webp"
+                            srcset="assets/images/gallery/desk/4-480.webp 480w, assets/images/gallery/desk/4-768.webp 768w, assets/images/gallery/desk/4-1152.webp 1152w, assets/images/gallery/desk/4.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/4.webp" alt="gallery image"
@@ -839,7 +865,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/5.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/5.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/5-768.webp"
+                            srcset="assets/images/gallery/desk/5-480.webp 480w, assets/images/gallery/desk/5-768.webp 768w, assets/images/gallery/desk/5-1152.webp 1152w, assets/images/gallery/desk/5.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/5.webp" alt="gallery image"
@@ -859,7 +887,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/6.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/6.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/6-768.webp"
+                            srcset="assets/images/gallery/desk/6-480.webp 480w, assets/images/gallery/desk/6-768.webp 768w, assets/images/gallery/desk/6-1152.webp 1152w, assets/images/gallery/desk/6.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/6.webp" alt="gallery image"
@@ -879,7 +909,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/7.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/7.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/7-768.webp"
+                            srcset="assets/images/gallery/desk/7-480.webp 480w, assets/images/gallery/desk/7-768.webp 768w, assets/images/gallery/desk/7-1152.webp 1152w, assets/images/gallery/desk/7.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/7.webp" alt="gallery image"
@@ -899,7 +931,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/8.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/8.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/8-768.webp"
+                            srcset="assets/images/gallery/desk/8-480.webp 480w, assets/images/gallery/desk/8-768.webp 768w, assets/images/gallery/desk/8-1152.webp 1152w, assets/images/gallery/desk/8.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/8.webp" alt="gallery image"
@@ -919,7 +953,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/9.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/9.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/9-768.webp"
+                            srcset="assets/images/gallery/desk/9-480.webp 480w, assets/images/gallery/desk/9-768.webp 768w, assets/images/gallery/desk/9-1152.webp 1152w, assets/images/gallery/desk/9.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/9.webp" alt="gallery image"
@@ -939,7 +975,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/10.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/10.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/10-768.webp"
+                            srcset="assets/images/gallery/desk/10-480.webp 480w, assets/images/gallery/desk/10-768.webp 768w, assets/images/gallery/desk/10-1152.webp 1152w, assets/images/gallery/desk/10.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/10.webp" alt="gallery image"
@@ -959,7 +997,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/11.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/11.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/11-768.webp"
+                            srcset="assets/images/gallery/desk/11-480.webp 480w, assets/images/gallery/desk/11-768.webp 768w, assets/images/gallery/desk/11-1152.webp 1152w, assets/images/gallery/desk/11.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/11.webp" alt="gallery image"
@@ -977,9 +1017,11 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/12.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/mob/12.png">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/12.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/12-700.webp"
+                            srcset="assets/images/gallery/desk/12-480.webp 480w, assets/images/gallery/desk/12-700.webp 700w"
+                            sizes="auto, 75vw" width="700" height="600" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/12.webp" alt="gallery image"
@@ -999,7 +1041,9 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/13.webp">
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/13.webp" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/13-768.webp"
+                            srcset="assets/images/gallery/desk/13-480.webp 480w, assets/images/gallery/desk/13-768.webp 768w, assets/images/gallery/desk/13-1152.webp 1152w, assets/images/gallery/desk/13.webp 1500w"
+                            sizes="auto, 75vw" width="1500" height="1008" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
                           <img loading="lazy" decoding="async" src="assets/images/gallery/mob/13.webp" alt="gallery image"
@@ -1826,7 +1870,9 @@
                 <div class="col-lg-6 px_40">
                   <div class="location-map">
                     <a href="assets/images/location_advantages/location-map.webp" data-fancybox="location-map">
-                      <img loading="lazy" decoding="async" src="assets/images/location_advantages/location-map.webp" alt="Location Map"
+                      <img loading="lazy" decoding="async" src="assets/images/location_advantages/location-map-680.webp"
+                        srcset="assets/images/location_advantages/location-map-480.webp 480w, assets/images/location_advantages/location-map-680.webp 680w, assets/images/location_advantages/location-map-960.webp 960w, assets/images/location_advantages/location-map.webp 1034w"
+                        sizes="auto, (min-width: 992px) 50vw, 100vw" width="680" height="481" alt="Location Map"
                         class="map-image" />
                     </a>
                   </div>
