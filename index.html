@@ -936,7 +936,7 @@
             <h2 class="price-list-title mb-0">PLANNED WITH INTELLIGENCE.</h2>
 
             <p class="price-list-desc">
-              Thoughtfully designed spaces that make more efficient use of every square foot.s
+              Thoughtfully designed spaces that make more efficient use of every square foot.
             </p>
 
             <!-- <ul class="nav nav-pills price-nav floor-navs" id="pills-tab1" role="tablist">
@@ -3521,6 +3521,9 @@
         document
           .querySelector(".contact-us-section")
           .classList.add("animated");
+
+        // No animation on small devices
+        if (window.innerWidth <= 768) return;
 
         // Fade in flowers
 
