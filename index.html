@@ -22,27 +22,95 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-  <!-- Bootstrap Icons -->
+  <!-- Hero image (LCP) -->
+  <link rel="preload" as="image" href="assets/images/hero/banner_img-914.webp"
+    imagesrcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
+    imagesizes="(max-width: 767px) 100vw, 50vw" fetchpriority="high" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <!-- Google Fonts (non-blocking) -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap" />
+
+  <!-- Bootstrap Icons (non-blocking) -->
+
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 
   <!-- Bootstrap CSS -->
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Swiper CSS -->
+  <!-- Swiper + Fancybox CSS (below the fold, non-blocking) -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  </noscript>
+
+  <script>
+    document.documentElement.classList.add('gsap-loading');
+  </script>
+  <style>
+    .gsap-loading .hero-left-image,
+    .gsap-loading .hero-multi-flowers,
+    .gsap-loading .hero-title-image,
+    .gsap-loading .hero-content .tagline,
+    .gsap-loading .hero-content .hero-typology,
+    .gsap-loading .hero-content .sub_tagline,
+    .gsap-loading .hero-address,
+    .gsap-loading .hero-description,
+    .gsap-loading .hero-arrow,
+    .gsap-loading .sidebar-logo,
+    .gsap-loading .sidebar-e-logo,
+    .gsap-loading .hamburger-menu,
+    .gsap-loading .header-buttons .btn {
+      visibility: hidden;
+    }
+    
+    @media (min-width: 768px) {
+      .gsap-loading .header-logo,
+      .gsap-loading .header-divider {
+        visibility: hidden;
+      }
+    }
+    
+    /* Accessibility Contrast Fixes */
+    .gallery-watermark-label, .watermark-label { 
+      color: #fff !important; 
+      background-color: rgba(0, 0, 0, 0.85) !important; 
+      text-shadow: 0 0 2px #000 !important; 
+      padding: 2px 6px; 
+      border-radius: 4px; 
+    }
+    /* Font Display Swap Override */
+    @font-face {
+      font-family: "bootstrap-icons";
+      src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2?2820a38") format("woff2"),
+           url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff?2820a38") format("woff");
+      font-display: swap;
+    }
+    
+    .price-area { color: #000 !important; font-weight: 700 !important; background-color: rgba(255,255,255,0.85) !important; padding: 2px 5px; border-radius: 4px; }
+    .price-list-overlay { background-color: rgba(0, 0, 0, 0.75) !important; }
+  </style>
 
   <!-- Custom CSS -->
 
-  <link href="styles.css?v=1" rel="stylesheet" />
+  <link href="styles.css?v=2" rel="stylesheet" />
 
   <title>
     SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida
@@ -142,16 +210,27 @@
 
   <!-- Google Tag Manager -->
 
+  <!-- Loaded on first user interaction, or shortly after page load as a fallback,
+       so it does not compete with the first render -->
   <script>
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
+      var loaded = false;
+      var events = ["scroll", "pointerdown", "touchstart", "keydown", "mousemove"];
+      function loadGTM() {
+        if (loaded) return;
+        loaded = true;
+        events.forEach(function (e) { w.removeEventListener(e, loadGTM); });
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      }
+      events.forEach(function (e) { w.addEventListener(e, loadGTM, { passive: true, once: true }); });
+      w.addEventListener("load", function () { setTimeout(loadGTM, 5000); });
     })(window, document, "script", "dataLayer", "GTM-52K5MJL2");
   </script>
 
@@ -191,7 +270,7 @@
   <!-- Sidebar Menu -->
 
   <div class="sidebar-menu" id="sidebarMenu">
-    <button class="sidebar-close-btn d-md-none" id="sidebarCloseBtn">
+    <button class="sidebar-close-btn d-md-none" id="sidebarCloseBtn" aria-label="Close Sidebar">
       <i class="bi bi-x"></i>
     </button>
 
@@ -302,14 +381,17 @@
     <div id="smooth-content">
       <!-- Main Content -->
 
-      <div class="main-content">
+      <main class="main-content">
         <!-- Hero Section -->
 
         <section class="hero-section" id="hero-section">
           <div class="container-fluid px-0">
             <div class="row">
               <div class="col-md-6 hero-left-col">
-                <img src="assets/images/hero/banner_img.webp" alt="Hero Left Image" class="hero-left-image" />
+                <img src="assets/images/hero/banner_img-914.webp"
+                  srcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
+                  sizes="(max-width: 767px) 100vw, 50vw" width="914" height="917" fetchpriority="high"
+                  alt="Hero Left Image" class="hero-left-image" />
               </div>
 
               <div class="col-md-6 hero-right-col">
@@ -318,11 +400,11 @@
                 <div class="hero-content">
                   <img src="assets/images/logo/logo_dark.svg" alt="SYNQ" class="hero-title-image" />
 
-                  <h2 class="tagline">Luxury, Now Powered By Intelligence</h2>
+                  <h1 class="tagline">Luxury, Now Powered By Intelligence</h1>
                   <div class="hero-typology">
-                    <h5>
+                    <h2 class="h5">
                       1 & 2 BHK IQ Suites by High Life
-                    </h5>
+                    </h2>
                     <p> AI-optimised homes designed around the way you live.</p>
                   </div>
 
@@ -335,9 +417,9 @@
 
                     <h3 class="sizes">
                       POWERED BY:
-                      <span><img class="sponsered_logo1" src="assets/images/logo/cleub.png" alt="" /></span>
+                      <span><img loading="lazy" decoding="async" class="sponsered_logo1" src="assets/images/logo/cleub.webp" alt="" /></span>
                       FURNISHED BY:
-                      <img class="sponsered_logo2" src="assets/images/logo/IKEA.png" alt="" />
+                      <img loading="lazy" decoding="async" class="sponsered_logo2" src="assets/images/logo/IKEA.webp" alt="" />
                     </h3>
 
                     <div class="patch">
@@ -345,7 +427,7 @@
 
                       <p class="save">PAY 40 & GET 40</p> -->
 
-                      <img class="img-fluid pay_patch" src="assets/images/pay_40.png" alt="" />
+                      <img loading="lazy" decoding="async" class="img-fluid pay_patch" src="assets/images/pay_40.webp" alt="" />
                     </div>
 
                     <!-- <div class="hero-keyhighlights-box">
@@ -366,7 +448,7 @@
                       </div> -->
 
                     <div class="hero-address">
-                      <img src="assets/images/icons/location.png" alt="Location" class="location" />
+                      <img loading="lazy" decoding="async" src="assets/images/icons/location.png" alt="Location" class="location" />
 
                       Dream Valley Tech Zone IV, Greater Noida (W)
                     </div>
@@ -402,19 +484,19 @@
         <!-- Overview Section -->
 
         <section class="overview-section" id="overview-section">
-          <img src="assets/images/pattern.png" alt="Overview Background" class="overview-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Overview Background" class="overview-bg" />
 
           <div class="overview-overlay"></div>
 
-          <img src="assets/images/pattern.png" alt="Flower" class="overview-flower">
+          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Flower" class="overview-flower">
 
           <div class="container">
             <div class="overview-content">
-              <h5 class="overview-subtitle">About Us</h5>
+              <h2 class="overview-subtitle h5">About Us</h2>
 
-              <h2 class="overview-title">
+              <h3 class="overview-title h2">
                 A HOME THAT WORKS AROUND YOU.
-              </h2>
+              </h3>
 
               <p class="overview-description">
                 SYNQ introduces 1 & 2 BHK IQ Suites by High Life - AI-optimised homes designed to make everyday living
@@ -507,17 +589,17 @@
 
                   <div class="details-sec">
                     <div class="specs">
-                      <img class="img-fluid" src="assets/images/building.png" alt="" />
+                      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/building.png" alt="" />
                       <p><span>Building Height</span> G+18 Floors</p>
                     </div>
 
                     <div class="specs">
-                      <img class="img-fluid" src="assets/images/commercial.png" alt="" />
+                      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/commercial.png" alt="" />
                       <p><span>Commercial</span> G+4 Floors</p>
                     </div>
 
                     <div class="specs">
-                      <img class="img-fluid" src="assets/images/residential.png" alt="" />
+                      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/residential.png" alt="" />
                       <p><span>Residential</span> 5th - 18th Floors</p>
                     </div>
                   </div>
@@ -530,22 +612,22 @@
         <!-- Highlights Section -->
 
         <section class="highlights-section" id="highlights-section">
-          <img src="assets/images/highlights/bg.webp" alt="Highlights Background" class="highlights-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/highlights/bg.webp" alt="Highlights Background" class="highlights-bg" />
 
           <!-- <img src="assets/images/pattern2.png" alt="Flower" class="highlights-flower"> -->
 
           <!-- <img src="assets/images/multi_flowers.png" alt="Flower" class="multi_flowers" /> -->
 
           <div class="container">
-            <h5 class="highlights-subtitle">Highlights</h5>
+            <h2 class="highlights-subtitle h5">Highlights</h2>
 
-            <h2 class="highlights-title">EVERYTHING. IN PERFECT SYNQ.</h2>
+            <h3 class="highlights-title h2">EVERYTHING. IN PERFECT SYNQ.</h3>
 
             <div class="highlights_content">
               <div class="row align-items-center mx_-80 mx_lg_-40">
                 <div class="col-lg-6 px_lg_40">
-                  <a href="assets/images/highlights/1.png" class="highlight-preview-link" data-fancybox="highlight">
-                    <img src="assets/images/highlights/1.png" alt="Highlights"
+                  <a href="assets/images/highlights/1.webp" class="highlight-preview-link" data-fancybox="highlight">
+                    <img loading="lazy" decoding="async" src="assets/images/highlights/1.webp" alt="Highlights"
                       class="highlights-image" />
                     <span class="watermark-label">AI Generated</span>
                   </a>
@@ -553,9 +635,9 @@
 
                 <div class="col-lg-6 px_60 px_lg_40">
                   <table class="highlights-table">
-                    <tr class="highlight-row active" tabindex="0" data-image="assets/images/highlights/1.png" data-label="AI Generated">
+                    <tr class="highlight-row active" tabindex="0" data-image="assets/images/highlights/1.webp" data-label="AI Generated">
                       <td class="icon-cell">
-                        <img src="assets/images/highlights/icons/bulding.png" alt="bed icon" class="img-fluid" />
+                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/bulding.png" alt="bed icon" class="img-fluid" />
                       </td>
 
                       <td class="text-cell">
@@ -564,9 +646,9 @@
                       </td>
                     </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/2.png" data-label="AI Generated">
+                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/2.webp" data-label="AI Generated">
                       <td class="icon-cell">
-                        <img src="assets/images/highlights/icons/control.png" alt="grass icon" class="img-fluid" />
+                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/control.png" alt="grass icon" class="img-fluid" />
                       </td>
 
                       <td class="text-cell">
@@ -575,9 +657,9 @@
                       </td>
                     </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/3.png" data-label="AI Generated">
+                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/3.webp" data-label="AI Generated">
                       <td class="icon-cell">
-                        <img src="assets/images/highlights/icons/balcony.png" alt="road icon" class="img-fluid" />
+                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/balcony.png" alt="road icon" class="img-fluid" />
                       </td>
 
                       <td class="text-cell">
@@ -586,9 +668,9 @@
                       </td>
                     </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/4.png" data-label="AI Generated">
+                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/4.webp" data-label="AI Generated">
                       <td class="icon-cell">
-                        <img src="assets/images/highlights/icons/mobile.png" alt="bulding icon" class="img-fluid" />
+                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/mobile.png" alt="bulding icon" class="img-fluid" />
                       </td>
 
                       <td class="text-cell">
@@ -597,9 +679,9 @@
                       </td>
                     </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/5.png" data-label="AI Generated">
+                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/5.webp" data-label="AI Generated">
                       <td class="icon-cell">
-                        <img src="assets/images/highlights/icons/sensor.png" alt="bulding icon" class="img-fluid" />
+                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/sensor.png" alt="bulding icon" class="img-fluid" />
                       </td>
 
                       <td class="text-cell">
@@ -619,7 +701,7 @@
 
         <section class="gallery-section" id="gallery-section">
 
-          <img src="assets/images/gallery/bg.webp" alt="Gallery Background" class="gallery-bg">
+          <img loading="lazy" decoding="async" src="assets/images/gallery/bg.webp" alt="Gallery Background" class="gallery-bg">
 
           <!-- <img src="assets/images/gallery/flower.png" alt="Gallery Flower" class="gallery-flower"> -->
 
@@ -627,9 +709,9 @@
 
           <div class="container">
 
-            <h5 class="gallery-subtitle">Gallery</h5>
+            <h2 class="gallery-subtitle h5">Gallery</h2>
 
-            <h2 class="gallery-title">A CLOSER LOOK AT LIFE IN SYNQ.</h2>
+            <h3 class="gallery-title h2">A CLOSER LOOK AT LIFE IN SYNQ.</h3>
             <p class="gallery-paragraph">
               Explore the spaces and intelligent features designed around you.
             </p>
@@ -648,12 +730,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/1.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/1.webp">
 
-                          <img src="assets/images/gallery/desk/1.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/1.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/1.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/1.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -668,12 +750,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/2.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/2.webp">
 
-                          <img src="assets/images/gallery/desk/2.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/2.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/2.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/2.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">Artistic Impression</span>
@@ -688,12 +770,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/3.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/3.webp">
 
-                          <img src="assets/images/gallery/desk/3.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/3.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/3.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/3.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">Artistic Impression</span>
@@ -708,12 +790,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/4.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/4.webp">
 
-                          <img src="assets/images/gallery/desk/4.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/4.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/4.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/4.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">Artistic Impression</span>
@@ -728,12 +810,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/5.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/5.webp">
 
-                          <img src="assets/images/gallery/desk/5.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/5.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/5.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/5.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">Artistic Impression</span>
@@ -748,12 +830,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/6.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/6.webp">
 
-                          <img src="assets/images/gallery/desk/6.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/6.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/6.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/6.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -768,12 +850,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/7.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/7.webp">
 
-                          <img src="assets/images/gallery/desk/7.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/7.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/7.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/7.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -788,12 +870,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/8.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/8.webp">
 
-                          <img src="assets/images/gallery/desk/8.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/8.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/8.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/8.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -808,12 +890,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/9.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/9.webp">
 
-                          <img src="assets/images/gallery/desk/9.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/9.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/9.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/9.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -828,12 +910,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/10.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/10.webp">
 
-                          <img src="assets/images/gallery/desk/10.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/10.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/10.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/10.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -848,12 +930,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/11.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/11.webp">
 
-                          <img src="assets/images/gallery/desk/11.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/11.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/11.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/11.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -870,10 +952,10 @@
 
                         <a data-fancybox="gallery" href="assets/images/gallery/desk/12.png">
 
-                          <img src="assets/images/gallery/desk/12.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/12.png" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/12.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/12.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -888,12 +970,12 @@
 
                       <div class="gallery-slide">
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/13.png">
+                        <a data-fancybox="gallery" href="assets/images/gallery/desk/13.webp">
 
-                          <img src="assets/images/gallery/desk/13.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/13.webp" alt="gallery image"
                             class="img-fluid gallery_img d-none d-md-block" />
 
-                          <img src="assets/images/gallery/mob/13.png" alt="gallery image"
+                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/13.webp" alt="gallery image"
                             class="img-fluid gallery_img_sm d-md-none" />
 
                           <span class="gallery-watermark-label">AI Generated</span>
@@ -924,16 +1006,16 @@
         <!-- Price List Section -->
 
         <section class="price-list-section" id="price-list-section">
-          <img src="assets/images/pattern.png" alt="Price List Background" class="price-list-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Price List Background" class="price-list-bg" />
 
           <div class="price-list-overlay"></div>
 
-          <img src="assets/images/pattern.png" alt="Flower" class="price-list-flower">
+          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Flower" class="price-list-flower">
 
           <div class="container">
-            <h5 class="price-list-subtitle">Price List</h5>
+            <h2 class="price-list-subtitle h5">Price List</h2>
 
-            <h2 class="price-list-title mb-0">PLANNED WITH INTELLIGENCE.</h2>
+            <h3 class="price-list-title h2 mb-0">PLANNED WITH INTELLIGENCE.</h3>
 
             <p class="price-list-desc">
               Thoughtfully designed spaces that make more efficient use of every square foot.
@@ -1651,16 +1733,16 @@
         <!-- Location Advantage Section -->
 
         <section class="location-section" id="location-section">
-          <img src="assets/images/location_advantages/bg.webp" alt="Location Background" class="location-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/location_advantages/bg.webp" alt="Location Background" class="location-bg" />
 
           <!-- <img src="assets/images/pattern1.png" alt="Location Flower" class="location-flower"> -->
 
           <!-- <img src="assets/images/multi_flowers.png" alt="Multi Flowers" class="location-multi-flowers"> -->
 
           <div class="container">
-            <h5 class="location-subtitle">Location Map</h5>
+            <h2 class="location-subtitle h5">Location Map</h2>
 
-            <h2 class="location-title">CONNECTED TO WHERE LIFE IS GOING.</h2>
+            <h3 class="location-title h2">CONNECTED TO WHERE LIFE IS GOING.</h3>
 
             <p class="location-description">
               Located in the most connected, developed, and livable sector of
@@ -1711,7 +1793,7 @@
                 <div class="col-lg-6 px_40">
                   <div class="location-map">
                     <a href="assets/images/location_advantages/location-map.webp" data-fancybox="location-map">
-                      <img src="assets/images/location_advantages/location-map.webp" alt="Location Map"
+                      <img loading="lazy" decoding="async" src="assets/images/location_advantages/location-map.webp" alt="Location Map"
                         class="map-image" />
                     </a>
                   </div>
@@ -1732,7 +1814,7 @@
                                   </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location"
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location"
                                 class="location-icon" />Numed Super Speciality Hospital - 3.5 kms
                             </td>
                           </tr>
@@ -1745,7 +1827,7 @@
                                   </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Yatharth Super Speciality Hospital - 4 kms
                             </td>
                           </tr>
@@ -1758,7 +1840,7 @@
                                   </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Kailash Hospital - 10 kms
                             </td>
                           </tr>
@@ -1771,7 +1853,7 @@
                                   </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Fortis Hospital - 11 kms
                             </td>
                           </tr>
@@ -1790,7 +1872,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location"
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location"
                                 class="location-icon" />The Shri Ram Universal School - 3.5 kms
                             </td>
                           </tr>
@@ -1803,7 +1885,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Ryan International School - 4 kms
                             </td>
                           </tr>
@@ -1816,7 +1898,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Pacific World School - 10 kms
                             </td>
                           </tr>
@@ -1829,7 +1911,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Lotus Valley International School - 11 kms
                             </td>
                           </tr>
@@ -1842,7 +1924,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               JBM Smart Start - 11 kms
                             </td>
                           </tr>
@@ -1861,7 +1943,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               D-Mart - 3 kms
                             </td>
                           </tr>
@@ -1874,7 +1956,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Gaur City Center & Mall - 4 kms
                             </td>
                           </tr>
@@ -1887,7 +1969,7 @@
                                 </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Blue Sapphire Mall - 4.5 kms
                             </td>
                           </tr>
@@ -1900,7 +1982,7 @@
                                 </td> -->
 
                             <td class="text-cell">   
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Gaur Cricket Stadium - 4.8 kms
                             </td>
                           </tr>
@@ -1919,7 +2001,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               R Systems - 3.5 kms
                             </td>
                           </tr>
@@ -1932,7 +2014,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Kyndryl Solutions - 3.5 kms
                             </td>
                           </tr>
@@ -1945,7 +2027,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Artha Infratech - 3.5 kms
                             </td>
                           </tr>
@@ -1958,7 +2040,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Yotta Data Center Park - 7 kms
                             </td>
                           </tr>
@@ -1977,7 +2059,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Gaur Cricket Stadium - 4.8 km
                             </td>
                           </tr>
@@ -1996,7 +2078,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Indira Gandhi International Airport
                             </td>
                           </tr>
@@ -2009,7 +2091,7 @@
                                         </td> -->
 
                             <td class="text-cell">
-                              <img src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
+                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
                               Noida International Airport
                             </td>
                           </tr>
@@ -2028,15 +2110,15 @@
         <!-- Floor Plans Section -->
 
         <section class="floor-plans-section" id="floor-plans-section">
-          <img src="assets/images/plans/bg.webp" alt="Floor Plans Background" class="floor-plans-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/plans/bg.webp" alt="Floor Plans Background" class="floor-plans-bg" />
 
-          <img src="assets/images/pattern.png" alt="Floor Plans Flower" class="floor-plans-flower">
+          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Floor Plans Flower" class="floor-plans-flower">
 
-          <h5 class="floor-plans-subtitle">Floor plans</h5>
+          <h2 class="floor-plans-subtitle h5">Floor plans</h2>
 
-          <h2 class="floor-plans-title">
+          <h3 class="floor-plans-title h2">
             PLANNED WITH INTELLIGENCE AT EVERY LEVEL.
-          </h2>
+          </h3>
 
           <!-- <ul class="nav nav-pills floor-navs" id="pills-tab" role="tablist">
 
@@ -2167,39 +2249,39 @@
               <div class="container">
                 <div class="floor-plans-content">
                   <div class="plan-image-container">
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/typical.png"
+                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/typical.webp"
                       data-plan="ground2" class="plan-image">
-                      <img src="assets/images/plans/high_life2/new/typical.png"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/typical.webp"
                         alt="Ground Floor Plan" class="img-fluid d-none d-md-block" />
 
-                      <img src="assets/images/plans/high_life2/new/typical.png"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/typical.webp"
                         alt="Ground Floor Plan" class="img-fluid d-md-none" />
                     </a>
 
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/refuge.png"
+                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/refuge.webp"
                       data-plan="1st-2nd-Floor2" class="plan-image">
-                      <img src="assets/images/plans/high_life2/new/refuge.png"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/refuge.webp"
                         alt="1st & 2nd Floor Plan" class="img-fluid d-none d-md-block" />
 
-                      <img src="assets/images/plans/high_life2/new/refuge.png"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/refuge.webp"
                         alt="1st & 2nd Floor Plan" class="img-fluid d-md-none" />
                     </a>
 
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/1bhk.png"
+                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/1bhk.webp"
                       data-plan="1bhk2" class="plan-image">
-                      <img src="assets/images/plans/high_life2/new/1bhk.png" alt="1 BHK Plan"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/1bhk.webp" alt="1 BHK Plan"
                         class="img-fluid d-none d-md-block" />
 
-                      <img src="assets/images/plans/high_life2/new/1bhk.png" alt="1 BHK Plan"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/1bhk.webp" alt="1 BHK Plan"
                         class="img-fluid d-md-none" />
                     </a>
 
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/2bhk.png"
+                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/2bhk.webp"
                       data-plan="2bhk2" class="plan-image">
-                      <img src="assets/images/plans/high_life2/new/2bhk.png" alt="2 BHK Plan"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/2bhk.webp" alt="2 BHK Plan"
                         class="img-fluid d-none d-md-block" />
 
-                      <img src="assets/images/plans/high_life2/new/2bhk.png" alt="2 BHK Plan"
+                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/2bhk.webp" alt="2 BHK Plan"
                         class="img-fluid d-md-none" />
                     </a>
                   </div>
@@ -2242,14 +2324,14 @@
         <!-- Contact Us Section -->
 
         <section class="contact-us-section" id="contact-us">
-          <img src="assets/images/contact-us/bg.webp" alt="Contact Us Background" class="contact-us-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/contact-us/bg.webp" alt="Contact Us Background" class="contact-us-bg" />
 
           <!-- <div class="contact-us-overlay"></div> -->
 
           <!-- <img src="assets/images/pattern1.png" alt="Flower Right" class="contact-us-flower-right"> -->
 
           <div class="container">
-            <h5 class="contact-us-subtitle">Contact Us</h5>
+            <h2 class="contact-us-subtitle h5">Contact Us</h2>
 
             <p class="contact-us-desc">
               Discover a home where intelligent technology, thoughtful design
@@ -2375,7 +2457,7 @@
         <!-- Footer Section -->
 
         <section class="footer-section" id="footer-section">
-          <img src="assets/images/footer/bg.webp" alt="Footer Background" class="footer-bg" />
+          <img loading="lazy" decoding="async" src="assets/images/footer/bg.webp" alt="Footer Background" class="footer-bg" />
 
           <div class="footer-overlay"></div>
 
@@ -2390,7 +2472,7 @@
                   <div class="row mx_-80 mx_lg_-40">
                     <div class="col-md-6 px_80 px_lg_40 left_col">
                       <div class="footer-company">
-                        <img src="assets/images/footer/great_value.png" alt="Great Value" class="footer-logo" />
+                        <img loading="lazy" decoding="async" src="assets/images/footer/great_value.png" alt="Great Value" class="footer-logo" />
 
                         <p class="footer-description">
                           Founded in 1970, Great Value Realty (GVR) began in
@@ -2422,7 +2504,7 @@
 
                     <div class="col-md-6 px_80 px_lg_40 right_col">
                       <div class="footer-company">
-                        <img src="assets/images/footer/yatharth.png" alt="Yatharth" class="footer-logo2" />
+                        <img loading="lazy" decoding="async" src="assets/images/footer/yatharth.png" alt="Yatharth" class="footer-logo2" />
 
                         <p class="footer-description">
                           Sanskar Realty is an extension of the Yatharth Group
@@ -2464,9 +2546,9 @@
                 <div class="col-lg-12 px_80">
                   <div class="disclaimer-content">
                     <div class="disclaimer-logos">
-                      <img src="assets/images/footer/nbcc.png" alt="NBCC" class="disclaimer-logo" />
+                      <img loading="lazy" decoding="async" src="assets/images/footer/nbcc.png" alt="NBCC" class="disclaimer-logo" />
 
-                      <img src="assets/images/footer/aspire.png" alt="Aspire" class="disclaimer-logo" />
+                      <img loading="lazy" decoding="async" src="assets/images/footer/aspire.png" alt="Aspire" class="disclaimer-logo" />
                     </div>
 
                     <div class="disclaimer-text-container">
@@ -2482,7 +2564,7 @@
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </div>
   </div>
 
@@ -2525,7 +2607,7 @@
 
   <div class="call-section d-none d-md-block zoom-in-zoom-out">
     <a href="tel:+919582600140">
-      <img class="img-fluid" src="assets/images/phone.png" alt="" />
+      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/phone.png" alt="" />
     </a>
   </div>
 
@@ -2577,7 +2659,7 @@
             <i class="bi bi-x"></i>
           </button>
 
-          <img class="img-fluid popup-logo" src="assets/images/logo/logo_dark.svg" alt="" />
+          <img loading="lazy" decoding="async" class="img-fluid popup-logo" src="assets/images/logo/logo_dark.svg" alt="" />
 
           <h3 class="modal-title">Have Questions? Ask Away!</h3>
 
@@ -2627,7 +2709,7 @@
             <i class="bi bi-x"></i>
           </button>
 
-          <img class="img-fluid popup-logo" src="assets/images/logo/logo_dark.svg" alt="" />
+          <img loading="lazy" decoding="async" class="img-fluid popup-logo" src="assets/images/logo/logo_dark.svg" alt="" />
 
           <h3 class="modal-title">Download Brochure</h3>
 
@@ -2669,1735 +2751,60 @@
 
   <!-- jQuery -->
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <!-- Bootstrap JS Bundle with Popper -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Swiper JS -->
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!-- GSAP -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <script src="js/ScrollSmoother.min.js"></script>
+  <script defer src="js/ScrollSmoother.min.js"></script>
 
-  <script src="js/queryform.min.ssl.js"></script>
+  <script defer src="js/queryform.min.ssl.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <script defer src="js/custom-animations.js"></script>
 
   <script>
-    // Register GSAP plugins
-
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-    // Create the smooth scroller only on larger screens (disabled on mobile / small devices)
-
-    const isSmallDevice =
-      window.matchMedia("(max-width: 991px)").matches ||
-      window.matchMedia("(pointer: coarse)").matches;
-
-    const smoother = isSmallDevice
-      ? null
-      : ScrollSmoother.create({
-          wrapper: "#smooth-wrapper",
-
-          content: "#smooth-content",
-
-          smooth: 1.5, // seconds it takes to "catch up" to the native scroll position
-
-          effects: true, // look for data-speed and data-lag attributes on elements
-        });
-
-    // Scroll to an element with the smoother when active, native scroll otherwise
-
-    function scrollToTarget(target) {
-      const el =
-        typeof target === "string" ? document.querySelector(target) : target;
-
-      if (!el) return;
-
-      if (smoother) {
-        smoother.scrollTo(el, true);
-      } else {
-        el.scrollIntoView();
+    // Lazy images change section heights when they arrive; keep GSAP trigger points accurate
+    (function () {
+      var timer;
+      function refresh() {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          if (window.ScrollTrigger) ScrollTrigger.refresh();
+        }, 200);
       }
-    }
-
-    // Add gsap-header class to header when scrolling past 100px
-
-    ScrollTrigger.create({
-      start: 0,
-
-      end: "max",
-
-      onUpdate: (self) => {
-        const header = document.querySelector(".header");
-
-        const header_main_logo =
-          document.querySelectorAll(".header .main_logo");
-
-        const yatharth_main_light_logo = document.querySelector(
-          ".header .yatharth_main_logo.light-logo",
-        );
-
-        const yatharth_main_dark_logo = document.querySelector(
-          ".header .yatharth_main_logo.dark-logo",
-        );
-
-        const header_divider = document.querySelector(
-          ".header .header-divider",
-        );
-
-        if (window.innerWidth > 768 && self.scroll() >= 200) {
-          header.classList.add("gsap-header");
-
-          header.classList.add("pin-active");
-
-          header_main_logo.forEach((logo) => {
-            logo.setAttribute(
-              "src",
-              "assets/images/logo/great_value_color.png",
-            );
-          });
-
-          yatharth_main_light_logo.style.setProperty(
-            "remarketing",
-            "none",
-            "important",
-          );
-
-          header_divider.style.setProperty(
-            "remarketing",
-            "none",
-            "important",
-          );
-        } else if (window.innerWidth <= 768 && self.scroll() >= 200) {
-          header.classList.add("gsap-header");
-
-          header.classList.add("pin-active");
-
-          if (self.scroll() >= 600) {
-            header_main_logo.forEach((logo) => {
-              logo.setAttribute(
-                "src",
-                "assets/images/logo/great_value_color.png",
-              );
-            });
-
-            header_divider.style.setProperty(
-              "remarketing",
-              "none",
-              "important",
-            );
-
-            yatharth_main_dark_logo.style.setProperty(
-              "remarketing",
-              "none",
-              "important",
-            );
-          } else {
-            header_main_logo.forEach((logo) => {
-              logo.setAttribute(
-                "src",
-                "assets/images/logo/great_value_dark.webp",
-              );
-            });
-
-            header_divider.style.setProperty(
-              "remarketing",
-              "block",
-              "important",
-            );
-
-            yatharth_main_dark_logo.style.setProperty(
-              "remarketing",
-              "block",
-              "important",
-            );
-          }
-        } else {
-          header.classList.remove("gsap-header");
-
-          header.classList.remove("pin-active");
-
-          if (window.innerWidth > 768) {
-            header_main_logo.forEach((logo) => {
-              logo.setAttribute("src", "assets/images/logo/great_value.png");
-            });
-          }
-
-          if (window.innerWidth > 768) {
-            yatharth_main_light_logo.style.setProperty(
-              "remarketing",
-              "block",
-              "important",
-            );
-
-            header_divider.style.setProperty(
-              "remarketing",
-              "block",
-              "important",
-            );
-          }
-        }
-      },
-    });
-
-    // Set up fixed header with proper GSAP configuration
-
-    // (() => {
-
-    //   const header = document.querySelector('.header');
-
-    //   const headerHeight = header.offsetHeight;
-
-    //   const isMobile = window.innerWidth <= 768;
-
-    //   // Add a special class to the header for GSAP manipulation
-
-    //   header.classList.add('gsap-header');
-
-    //   // Create a div to maintain the header's space in layout
-
-    //   const headerPlaceholder = document.createElement('div');
-
-    //   headerPlaceholder.style.height = `${headerHeight}px`;
-
-    //   headerPlaceholder.style.remarketing = 'none';
-
-    //   header.parentNode.insertBefore(headerPlaceholder, header);
-
-    //   // ScrollTrigger for tracking scroll position
-
-    //   ScrollTrigger.create({
-
-    //     start: 0,
-
-    //     end: 'max',
-
-    //     onUpdate: (self) => {
-
-    //       // Only add pin-active class after scrolling past 100px
-
-    //       if (self.scroll() >= 100) {
-
-    //         header.classList.add('pin-active');
-
-    //         // headerPlaceholder.style.remarketing = 'block';
-
-    //         // Switch to dark logos
-
-    //         // if(!isMobile){
-
-    //         //   document.querySelectorAll('.light-logo').forEach(logo => {
-
-    //         //   logo.classList.add('d-none');
-
-    //         //   logo.classList.remove('d-md-block');
-
-    //         // });
-
-    //         // document.querySelectorAll('.dark-logo').forEach(logo => {
-
-    //         //   logo.classList.remove('d-none');
-
-    //         //   logo.classList.add('d-md-block');
-
-    //         // });
-
-    //         // }
-
-    //       } else {
-
-    //         header.classList.remove('pin-active');
-
-    //         // headerPlaceholder.style.remarketing = 'none';
-
-    //         // Switch back to light logos
-
-    //         // if(!isMobile){
-
-    //         //   document.querySelectorAll('.light-logo').forEach(logo => {
-
-    //         //   logo.classList.remove('d-none');
-
-    //         //   logo.classList.add('d-md-block');
-
-    //         // });
-
-    //         // document.querySelectorAll('.dark-logo').forEach(logo => {
-
-    //         //   logo.classList.add('d-none');
-
-    //         //   logo.classList.remove('d-md-block');
-
-    //         // });
-
-    //         // }
-
-    //       }
-
-    //     }
-
-    //   });
-
-    //   // Pin the header with ScrollTrigger
-
-    //   ScrollTrigger.create({
-
-    //     trigger: header,
-
-    //     start: "top top",
-
-    //     endTrigger: document.body,
-
-    //     end: "bottom top",
-
-    //     pin: true,
-
-    //     pinReparent: true,
-
-    //     pinSpacing: false,
-
-    //   });
-
-    // })();
-
-    // handle navigation links
-
-    document.querySelectorAll(".nav-link").forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // get the target section
-
-        const targetId = this.getAttribute("href");
-
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-          document.querySelector("#sidebarMenu").classList.remove("active");
-
-          document.querySelector("#hamburgerMenu").classList.remove("active");
-
-          document
-            .querySelector("#mobileHamburgerMenu")
-            .classList.remove("active");
-
-          scrollToTarget(targetSection);
-        }
+      document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
+        if (!img.complete) img.addEventListener("load", refresh, { once: true });
       });
-    });
-
-    const button = document.querySelector(".hero-buttons");
-
-    const screenHeight = window.innerHeight;
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > screenHeight) {
-        button.classList.add("scrolled");
-      } else {
-        button.classList.remove("scrolled");
-      }
-    });
-
-    // Sidebar elements fade in animation
-
-    gsap.from(".sidebar-logo", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: -20,
-
-      ease: "power2.out",
-
-      delay: 0.2,
-    });
-
-    gsap.from(".sidebar-e-logo", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: -20,
-
-      ease: "power2.out",
-
-      delay: 0.4,
-    });
-
-    gsap.from(".hamburger-menu", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: -20,
-
-      ease: "power2.out",
-
-      delay: 0.6,
-    });
-
-    // Add animation for header buttons - use set to establish initial state then to for animation
-
-    gsap.set(".header-buttons .btn", {
-      opacity: 0,
-
-      x: 20,
-    });
-
-    gsap.set(".header-buttons:after", {
-      opacity: 0,
-
-      x: 10,
-    });
-
-    gsap.to(".header-buttons .btn", {
-      duration: 0.3,
-
-      opacity: 1,
-
-      x: 0,
-
-      stagger: 0.2,
-
-      ease: "power2.out",
-
-      delay: 0.9,
-
-      clearProps: "all", // Clear properties after animation completes
-    });
-
-    gsap.from(".sidebar-text", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 20,
-
-      ease: "power2.out",
-
-      delay: 0.8,
-    });
-
-    // Header elements fade in animation
-
-    gsap.from(".header-logo", {
-      duration: 1,
-
-      opacity: 0,
-
-      x: -50,
-
-      ease: "power2.out",
-
-      delay: 1,
-    });
-
-    gsap.from(".header-divider", {
-      duration: 1,
-
-      opacity: 0,
-
-      scaleX: 0,
-
-      ease: "power2.out",
-
-      delay: 1,
-    });
-
-    // Set initial state for hero buttons
-
-    gsap.set(".hero-buttons", {
-      opacity: 0,
-    });
-
-    // Set initial states for flowers
-
-    gsap.set([".hero-flower", ".overview-flower"], {
-      opacity: 0,
-    });
-
-    // Fade in hero buttons
-
-    gsap.to(".hero-buttons", {
-      duration: 0.5,
-
-      opacity: 1,
-
-      x: 0,
-
-      ease: "power2.in",
-
-      delay: 1,
-
-      // scrollTrigger:{
-
-      //   pin:true,
-
-      //   trigger: ".hero-buttons",
-
-      // }
-    });
-
-    // Fade in hero flower
-
-    gsap.to(".hero-flower", {
-      duration: 1.5,
-
-      opacity: 1,
-
-      ease: "power2.out",
-
-      delay: 2.5,
-    });
-
-    // Fade in overview flower when scrolled to overview section
-
-    ScrollTrigger.create({
-      trigger: ".overview-section",
-
-      start: "top 80%",
-
-      onEnter: () => {
-        gsap.to(".overview-flower", {
-          duration: 1.5,
-
-          opacity: 1,
-
-          ease: "power2.out",
-        });
-      },
-    });
-
-    // Overview section content animations
-
-    ScrollTrigger.batch(
-      ".overview-subtitle, .overview-title, .overview-description, .counter-item",
-      {
-        interval: 0.1,
-
-        batchMax: 3,
-
-        onEnter: (elements) => {
-          gsap.set(elements, { visibility: "visible" });
-
-          gsap.from(elements, {
-            opacity: 0,
-
-            y: 50,
-
-            stagger: 0.15,
-
-            duration: 1,
-
-            ease: "power2.out",
-          });
-        },
-
-        start: "top 80%",
-      },
-    );
-
-    // Counter animation
-
-    // let counted = false;
-
-    // ScrollTrigger.create({
-
-    //   trigger: ".overview-counters",
-
-    //   start: "top 80%",
-
-    //   onEnter: () => {
-
-    //     gsap.set(".overview-content, .counter-item", { visibility: "visible" });
-
-    //     if (!counted) {
-
-    //       counted = true;
-
-    //       document.querySelectorAll('.counter').forEach(counter => {
-
-    //         const target = parseInt(counter.getAttribute('data-target'));
-
-    //         const duration = 2; // seconds
-
-    //         const start = { value: 0 };
-
-    //         gsap.to(start, {
-
-    //           value: target,
-
-    //           duration: duration,
-
-    //           ease: "power2.out",
-
-    //           onUpdate: () => {
-
-    //             counter.textContent = Math.round(start.value);
-
-    //           }
-
-    //         });
-
-    //       });
-
-    //     }
-
-    //   }
-
-    // });
-
-    // Hero content animations
-
-    gsap.from(".hero-left-image", {
-      duration: 1,
-
-      opacity: 0,
-
-      scale: 1.1,
-
-      ease: "power2.out",
-
-      delay: 1,
-    });
-
-    gsap.from(".hero-multi-flowers", {
-      duration: 1.5,
-
-      opacity: 0,
-
-      y: 30,
-
-      ease: "power2.out",
-
-      delay: 2,
-    });
-
-    gsap.from(".hero-title-image", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 1.5,
-    });
-
-    gsap.from(".hero-content .tagline", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 1.6,
-    });
-
-    gsap.from(".hero-content .hero-typology", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 1.65,
-    });
-
-    gsap.from(".hero-content .sub_tagline", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 1.7,
-    });
-
-    gsap.from(".hero-address", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 1.7,
-    });
-
-    gsap.from(".hero-description", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 1.9,
-    });
-
-    gsap.from(".hero-arrow", {
-      duration: 1,
-
-      opacity: 0,
-
-      y: 50,
-
-      ease: "power2.out",
-
-      delay: 2.3,
-    });
-
-    // Highlights section animations
-
-    ScrollTrigger.create({
-      trigger: ".highlights-section",
-
-      start: "top 80%",
-
-      markers: false, // Visual markers for debugging
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Highlights section entered viewport");
-
-        // Force elements to be visible first
-
-        gsap.set(
-          ".highlights-subtitle, .highlights-title, .highlights-image, .highlights-table tr",
-          {
-            visibility: "visible",
-          },
-        );
-
-        // Fade in flower
-
-        gsap.to(".highlights-flower", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Subtitle animation
-
-        gsap.to(".highlights-subtitle", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-        });
-
-        // Title animation
-
-        gsap.set(".highlights-title", {
-          opacity: 0,
-          scaleX: 0,
-          y: 0,
-        });
-
-        gsap.to(".highlights-title", {
-          opacity: 1,
-          scaleX: 1,
-          y: 0,
-
-          duration: 0.9,
-
-          ease: "power2.inOut",
-
-          delay: 0.2,
-        });
-
-        // Image animation
-
-        gsap.to(".highlights-image", {
-          opacity: 1,
-
-          x: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.3,
-        });
-
-        // Table rows animation - center-drawn line + content fade from right
-
-        const rows = document.querySelectorAll(".highlights-table tr");
-
-        rows.forEach((row, index) => {
-          const textCell = row.querySelector(".text-cell");
-          const icon = row.querySelector(".icon-cell img");
-          const rowTimeline = gsap.timeline({
-            delay: 0.9 + index * 0.2,
-          });
-
-          gsap.set(row, {
-            opacity: 0,
-            x: 0,
-            y: 0,
-            "--line-length": "0%",
-          });
-
-          gsap.set(textCell, {
-            opacity: 0,
-            x: 26,
-          });
-
-          gsap.set(icon, {
-            opacity: 0,
-            scale: 0.72,
-          });
-
-          rowTimeline.to(row, {
-            opacity: 1,
-            duration: 0.15,
-            ease: "none",
-          });
-
-          rowTimeline.to(row, {
-            "--line-length": "100%",
-            duration: 0.8,
-            ease: "power2.inOut",
-          }, "<");
-
-          rowTimeline.to(textCell, {
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            ease: "power2.out",
-          }, "<");
-
-          rowTimeline.to(icon, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.5,
-            ease: "back.out(1.6)",
-          });
-        });
-      },
-    });
-
-    // Contact Us section animations
-
-    ScrollTrigger.create({
-      trigger: ".contact-us-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Contact us section entered viewport");
-
-        // Add animated class to enable CSS transitions
-
-        document
-          .querySelector(".contact-us-section")
-          .classList.add("animated");
-
-        // No animation on small devices
-        if (window.innerWidth <= 768) return;
-
-        // Fade in flowers
-
-        gsap.to(".contact-us-flower-right", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Form animation
-
-        gsap.to(".contact-form-parent", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.5,
-        });
-
-        // Contact info animation
-
-        gsap.to(".contact-info-container", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.7,
-        });
-      },
-    });
-
-    // Price List section animations
-
-    ScrollTrigger.create({
-      trigger: ".price-list-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Price list section entered viewport");
-
-        // Make sure the subtitle is visible and properly positioned
-
-        gsap.set(".price-list-subtitle", {
-          opacity: 1,
-
-          y: 0,
-        });
-
-        // Fade in flower
-
-        gsap.to(".price-list-flower", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Only animate title and boxes
-
-        gsap.from(".price-list-title", {
-          opacity: 0,
-
-          y: 30,
-
-          duration: 1,
-
-          ease: "power2.out",
-        });
-
-        gsap.from(".price-box", {
-          opacity: 0,
-
-          y: 50,
-
-          duration: 1,
-
-          stagger: 0.2,
-
-          ease: "power2.out",
-
-          delay: 0.3,
-        });
-      },
-    });
-
-    // Floor Plans section animations
-
-    ScrollTrigger.create({
-      trigger: ".floor-plans-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Floor plans section entered viewport");
-
-        // Subtitle and title animations
-
-        gsap.to(".floor-plans-subtitle", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-        });
-
-        // Fade in flower
-
-        gsap.to(".floor-plans-flower", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        gsap.to(".floor-plans-title", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.2,
-        });
-
-        // Plan images and swiper animations
-
-        gsap.from(".plan-image-container", {
-          opacity: 0,
-
-          y: 30,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.4,
-        });
-
-        gsap.from(".planSwiper", {
-          opacity: 0,
-
-          y: 30,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.6,
-        });
-      },
-    });
-
-    // Gallery section animations
-
-    ScrollTrigger.create({
-      trigger: ".gallery-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Gallery section entered viewport");
-
-        // Subtitle animation
-
-        gsap.to(".gallery-subtitle", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-        });
-
-        // Fade in flower
-
-        gsap.to(".gallery-flower", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Title animation
-
-        gsap.to(".gallery-title", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.2,
-        });
-
-        // Slider animation
-
-        gsap.from(".gallery-slider-container", {
-          opacity: 0,
-
-          y: 50,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.4,
-        });
-      },
-    });
-
-    // Footer section animations
-
-    ScrollTrigger.create({
-      trigger: ".footer-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Footer section entered viewport");
-
-        // Add animated class to enable CSS transitions
-
-        document.querySelector(".footer-section").classList.add("animated");
-
-        // Fade in flower
-
-        gsap.to(".footer-flower", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Content animation
-
-        gsap.to(".footer-title, .footer-content", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          stagger: 0.2,
-        });
-      },
-    });
-
-    // Amenities section animations
-
-    ScrollTrigger.create({
-      trigger: ".amenities-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Amenities section entered viewport");
-
-        // Subtitle and title animations
-
-        gsap.from(".amenities-subtitle", {
-          opacity: 0,
-
-          y: 30,
-
-          duration: 1,
-
-          ease: "power2.out",
-        });
-
-        gsap.from(".amenities-title", {
-          opacity: 0,
-
-          y: 30,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.2,
-        });
-
-        gsap.from(".amenities-slider", {
-          opacity: 0,
-
-          x: -50,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.4,
-        });
-
-        // Table rows animation - one by one
-
-        const rows = document.querySelectorAll(".amenities-table tr");
-
-        rows.forEach((row, index) => {
-          gsap.from(row, {
-            opacity: 0,
-
-            x: 50,
-
-            duration: 0.8,
-
-            ease: "power2.out",
-
-            delay: 0.5 + index * 0.15,
-          });
-        });
-      },
-    });
-
-    // Location section animations
-
-    ScrollTrigger.create({
-      trigger: ".location-section",
-
-      start: "top 80%",
-
-      markers: false,
-
-      once: true,
-
-      onEnter: function () {
-        console.log("Location section entered viewport");
-
-        // Force elements to be visible first
-
-        gsap.set(".location-subtitle, .location-title, .location-table tr", {
-          visibility: "visible",
-        });
-
-        // Fade in flower
-
-        gsap.to(".location-flower", {
-          opacity: 1,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Multi flowers animation
-
-        gsap.from(".location-multi-flowers", {
-          opacity: 0,
-
-          y: 30,
-
-          duration: 1.5,
-
-          ease: "power2.out",
-        });
-
-        // Subtitle animation
-
-        gsap.to(".location-subtitle", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-        });
-
-        // Title animation
-
-        gsap.to(".location-title", {
-          opacity: 1,
-
-          y: 0,
-
-          duration: 1,
-
-          ease: "power2.out",
-
-          delay: 0.2,
-        });
-
-        // Table rows animation - one by one
-
-        const rows = document.querySelectorAll(".location-table tr");
-
-        rows.forEach((row, index) => {
-          gsap.to(row, {
-            opacity: 1,
-
-            x: 0,
-
-            duration: 0.8,
-
-            ease: "power2.out",
-
-            delay: 0.5 + index * 0.15,
-          });
-        });
-      },
-    });
-
-    $(document).ready(function () {
-      // Make sure price list subtitle is visible on page load
-
-      document.querySelector(".price-list-subtitle").style.opacity = "1";
-
-      document.querySelector(".price-list-subtitle").style.transform =
-        "translateY(0)";
-
-      // Make sure amenities subtitle is visible on page load
-
-      if (document.querySelector(".amenities-subtitle")) {
-        document.querySelector(".amenities-subtitle").style.opacity = "1";
-
-        document.querySelector(".amenities-subtitle").style.transform =
-          "translateY(0)";
-      }
-
-      // Smooth scroll for all anchor links
-
-      $('a[href^="#"]').on("click", function (e) {
-        e.preventDefault();
-
-        const target = $(this.hash);
-
-        if (target.length) {
-          scrollToTarget(target[0]);
-        }
-      });
-
-      // Smooth scroll for hero arrow
-
-      $(".hero-arrow").on("click", function () {
-        scrollToTarget(".overview-section");
-      });
-
-      // Fallback to ensure visibility if animations don't fire
-
-      setTimeout(function () {
-        document.body.classList.add("js-animation-fallback");
-      }, 3000);
-
-      // Desktop sidebar menu toggle
-
-      $("#hamburgerMenu").click(function () {
-        $(this).toggleClass("active");
-
-        $("#sidebarMenu").toggleClass("active");
-      });
-
-      // Mobile hamburger menu toggle
-
-      $("#mobileHamburgerMenu").click(function () {
-        $(this).toggleClass("active");
-
-        $("#sidebarMenu").toggleClass("active");
-      });
-
-      // Sidebar close button
-
-      $("#sidebarCloseBtn").click(function () {
-        $("#sidebarMenu").removeClass("active");
-
-        $("#mobileHamburgerMenu").removeClass("active");
-      });
-
-      // Initialize Plan Swiper
-
-      const planSwiper = new Swiper(".planSwiper", {
-        slidesPerView: 3,
-
-        centeredSlides: true,
-
-        spaceBetween: 2,
-
-        loop: true,
-
-        initialSlide: 1,
-
-        navigation: {
-          nextEl: ".plan-nav-next",
-
-          prevEl: ".plan-nav-prev",
-        },
-
-        observer: true,
-
-        observeParents: true,
-
-        on: {
-          init: function () {
-            // Force arrows to be visible
-
-            setTimeout(() => {
-              const prevArrow = document.querySelector(".plan-nav-prev");
-
-              const nextArrow = document.querySelector(".plan-nav-next");
-
-              if (prevArrow) {
-                prevArrow.style.visibility = "visible";
-
-                prevArrow.style.opacity = "1";
-
-                prevArrow.style.pointerEvents = "auto";
-              }
-
-              if (nextArrow) {
-                nextArrow.style.visibility = "visible";
-
-                nextArrow.style.opacity = "1";
-
-                nextArrow.style.pointerEvents = "auto";
-              }
-            }, 100);
-          },
-
-          slideChange: function () {
-            const activeSlide = this.slides[this.activeIndex];
-
-            const planType = $(activeSlide).attr("data-plan");
-
-            $(".plan-image").removeClass("active");
-
-            $(`.plan-image[data-plan="${planType}"]`).addClass("active");
-          },
-        },
-
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-
-            centeredSlides: true,
-          },
-
-          576: {
-            slidesPerView: 1,
-
-            centeredSlides: true,
-          },
-
-          768: {
-            slidesPerView: 3,
-
-            centeredSlides: true,
-          },
-        },
-      });
-
-      // mySwiper.reInit()
-
-      document
-        .querySelectorAll(".planSwiper .swiper-slide")
-        .forEach((item, index) => {
-          $(item).click(function () {
-            const slideIndex = parseInt(
-              $(this).attr("data-swiper-slide-index"),
-              10,
-            );
-
-            planSwiper.slideToLoop(slideIndex, 500); // 500ms transition
-          });
-        });
-
-      const planSwiper2 = new Swiper(".planSwiper2", {
-        slidesPerView: 3,
-
-        centeredSlides: true,
-
-        spaceBetween: 2,
-
-        loop: true,
-
-        initialSlide: 1,
-
-        navigation: {
-          nextEl: ".plan-nav-next2",
-
-          prevEl: ".plan-nav-prev2",
-        },
-
-        observer: true,
-
-        observeParents: true,
-
-        on: {
-          init: function () {
-            // Force arrows to be visible
-
-            setTimeout(() => {
-              const prevArrow = document.querySelector(".plan-nav-prev2");
-
-              const nextArrow = document.querySelector(".plan-nav-next2");
-
-              if (prevArrow) {
-                prevArrow.style.visibility = "visible";
-
-                prevArrow.style.opacity = "1";
-
-                prevArrow.style.pointerEvents = "auto";
-              }
-
-              if (nextArrow) {
-                nextArrow.style.visibility = "visible";
-
-                nextArrow.style.opacity = "1";
-
-                nextArrow.style.pointerEvents = "auto";
-              }
-            }, 100);
-          },
-
-          slideChange: function () {
-            const activeSlide = this.slides[this.activeIndex];
-
-            const planType = $(activeSlide).attr("data-plan");
-
-            $(".plan-image").removeClass("active");
-
-            $(`.plan-image[data-plan="${planType}"]`).addClass("active");
-          },
-        },
-
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-
-            centeredSlides: true,
-          },
-
-          576: {
-            slidesPerView: 1,
-
-            centeredSlides: true,
-          },
-
-          768: {
-            slidesPerView: 3,
-
-            centeredSlides: true,
-          },
-        },
-      });
-
-      document
-        .querySelectorAll(".planSwiper2 .swiper-slide")
-        .forEach((item, index) => {
-          $(item).click(function () {
-            const slideIndex = parseInt(
-              $(this).attr("data-swiper-slide-index"),
-              10,
-            );
-
-            planSwiper2.slideToLoop(slideIndex, 500); // 500ms transition
-          });
-        });
-
-      // Initialize Gallery Swiper
-
-      const gallerySwiper = new Swiper(".gallerySwiper", {
-        slidesPerView: 1.5,
-
-        centeredSlides: true,
-
-        spaceBetween: 30,
-
-        loop: true,
-
-        effect: "slide",
-
-        speed: 600,
-
-        navigation: {
-          nextEl: ".gallery-nav-next",
-
-          prevEl: ".gallery-nav-prev",
-        },
-
-        breakpoints: {
-          320: {
-            slidesPerView: 1.2,
-
-            spaceBetween: 10,
-          },
-
-          576: {
-            slidesPerView: 1.2,
-
-            spaceBetween: 15,
-          },
-
-          768: {
-            slidesPerView: 1.3,
-
-            spaceBetween: 20,
-          },
-
-          992: {
-            slidesPerView: 1.5,
-
-            spaceBetween: 70,
-          },
-        },
-      });
-
-      // Add opacity styling for non-active slides
-
-      // gallerySwiper.on('slideChangeTransitionStart', function () {
-
-      //   const slides = document.querySelectorAll('.gallerySwiper .swiper-slide');
-
-      //   slides.forEach(slide => {
-
-      //     if (!slide.classList.contains('swiper-slide-active')) {
-
-      //       slide.style.opacity = '0.5';
-
-      //     } else {
-
-      //       slide.style.opacity = '1';
-
-      //     }
-
-      //   });
-
-      // });
-
-      // Initialize Amenities Swiper
-
-      const amenitiesSwiper = new Swiper(".amenitiesSwiper", {
-        slidesPerView: 1,
-
-        spaceBetween: 30,
-
-        loop: true,
-
-        navigation: {
-          nextEl: ".swiper-button-next",
-
-          prevEl: ".swiper-button-prev",
-        },
-
-        on: {
-          slideChange: function () {
-            const activeSlide = this.slides[this.activeIndex];
-
-            const amenityType = activeSlide.getAttribute("data-amenity");
-
-            // Remove active class from all rows
-
-            $(".amenity-row").removeClass("active");
-
-            // Add active class to matching row
-
-            $(`.amenity-row[data-amenity="${amenityType}"]`).addClass(
-              "active",
-            );
-          },
-        },
-      });
-
-      // Counter Animation
-
-      let counted = false;
-
-      $(window).scroll(function () {
-        const overviewSection = $(".overview-section");
-
-        if (overviewSection.length) {
-          const top_of_element = overviewSection.offset().top;
-
-          const bottom_of_element =
-            overviewSection.offset().top + overviewSection.outerHeight();
-
-          const bottom_of_screen = $(window).scrollTop() + $(window).height();
-
-          const top_of_screen = $(window).scrollTop();
-
-          if (
-            bottom_of_screen > top_of_element &&
-            top_of_screen < bottom_of_element &&
-            !counted
-          ) {
-            counted = true;
-
-            $(".counter").each(function () {
-              const $this = $(this);
-
-              const target = parseInt($this.attr("data-target"));
-
-              $({ Counter: 0 }).animate(
-                {
-                  Counter: target,
-                },
-                {
-                  duration: 2000,
-
-                  easing: "swing",
-
-                  step: function () {
-                    const current = Math.ceil(this.Counter);
-
-                    $this.text(current);
-                  },
-
-                  complete: function () {
-                    $this.text(target);
-                  },
-                },
-              );
-            });
-          }
-        }
-      });
-    });
+    })();
   </script>
 
-  <script></script>
-
   <script type="text/javascript" language="javascript">
-    var versionUpdate = new Date().getTime();
+    window.addEventListener("load", function () {
+      var versionUpdate = new Date().getTime();
 
-    var script = document.createElement("script");
+      var script = document.createElement("script");
 
-    script.type = "text/javascript";
+      script.type = "text/javascript";
 
-    script.src =
-      "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" +
-      versionUpdate;
+      script.src =
+        "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" +
+        versionUpdate;
 
-    document.body.appendChild(script);
+      document.body.appendChild(script);
+    });
   </script>
 
   <script>
@@ -4415,6 +2822,7 @@
 
     //--------------------------------------------------------------------------------------//
 
+    window.addEventListener("DOMContentLoaded", function () {
     $("#preferedtime").hide();
 
     $("#SubmitQuery").click(function () {
@@ -4458,6 +2866,7 @@
 
       SubmitQueryData(AgentInfo, FormInfo);
     });
+    });
   </script>
 
   <script>
@@ -4476,7 +2885,7 @@
 
         previewLink.setAttribute('href', imageSrc);
         previewImage.setAttribute('src', imageSrc);
-        previewImage.setAttribute('alt', 'Highlight ' + imageSrc.split('/').pop().replace(/\.png$/i, ''));
+        previewImage.setAttribute('alt', 'Highlight ' + imageSrc.split('/').pop().replace(/\.(png|webp)$/i, ''));
 
         if (watermark) {
           watermark.textContent = label;
