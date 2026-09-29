@@ -1,17 +1,16 @@
 <!doctype html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
 
-  <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <!-- Google Fonts -->
 
-  <!-- Google Fonts -->
-
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -20,165 +19,259 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family==Montserrat:wght@300;100..900&family=Playfair+remarketing:wght@300;400;500;600;700&remarketing=swap"
     rel="stylesheet"> -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-  <!-- Hero image (LCP) -->
-  <link rel="preload" as="image" href="assets/images/hero/banner_img-914.webp"
-    imagesrcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
-    imagesizes="(max-width: 767px) 100vw, 50vw" fetchpriority="high" />
+    <!-- Hero image (LCP) -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero/banner_img-914.webp"
+      imagesrcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
+      imagesizes="(max-width: 767px) 100vw, 50vw"
+      fetchpriority="high"
+    />
 
-  <!-- Google Fonts (non-blocking) -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap" />
-  <link rel="stylesheet" media="print" onload="this.media='all'"
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap" />
+    <!-- Google Fonts (non-blocking) -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap"
+    />
 
-  <!-- Bootstrap Icons (non-blocking) -->
+    <!-- Bootstrap Icons (non-blocking) -->
 
-  <link rel="stylesheet" media="print" onload="this.media='all'"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
 
-  <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
 
-  <!-- Swiper + Fancybox CSS (below the fold, non-blocking) -->
+    <!-- Swiper + Fancybox CSS (below the fold, non-blocking) -->
 
-  <link rel="stylesheet" media="print" onload="this.media='all'"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <link rel="stylesheet" media="print" onload="this.media='all'"
-    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
 
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-  </noscript>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:wght@100..900&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+      />
+      <link rel="stylesheet" href="styles.css?v=2" />
+    </noscript>
 
-  <script>
-    document.documentElement.classList.add('gsap-loading');
-  </script>
-  <style>
-    .gsap-loading .hero-left-image,
-    .gsap-loading .hero-multi-flowers,
-    .gsap-loading .hero-title-image,
-    .gsap-loading .hero-content .tagline,
-    .gsap-loading .hero-content .hero-typology,
-    .gsap-loading .hero-content .sub_tagline,
-    .gsap-loading .hero-address,
-    .gsap-loading .hero-description,
-    .gsap-loading .hero-arrow,
-    .gsap-loading .sidebar-logo,
-    .gsap-loading .sidebar-e-logo,
-    .gsap-loading .hamburger-menu,
-    .gsap-loading .header-buttons .btn {
-      visibility: hidden;
-    }
-    
-    @media (min-width: 768px) {
-      .gsap-loading .header-logo,
-      .gsap-loading .header-divider {
+    <script>
+      document.documentElement.classList.add("gsap-loading");
+    </script>
+    <style>
+      .gsap-loading .hero-left-image,
+      .gsap-loading .hero-multi-flowers,
+      .gsap-loading .hero-title-image,
+      .gsap-loading .hero-content .tagline,
+      .gsap-loading .hero-content .hero-typology,
+      .gsap-loading .hero-content .sub_tagline,
+      .gsap-loading .hero-address,
+      .gsap-loading .hero-description,
+      .gsap-loading .hero-arrow,
+      .gsap-loading .sidebar-logo,
+      .gsap-loading .sidebar-e-logo,
+      .gsap-loading .hamburger-menu,
+      .gsap-loading .header-buttons .btn {
         visibility: hidden;
       }
-    }
-    
-    /* Accessibility Contrast Fixes */
-    .gallery-watermark-label, .watermark-label { 
-      color: #fff !important; 
-      background-color: rgba(0, 0, 0, 0.85) !important; 
-      text-shadow: 0 0 2px #000 !important; 
-      padding: 2px 6px; 
-      border-radius: 4px; 
-    }
-    /* Font Display Swap Override */
-    @font-face {
-      font-family: "bootstrap-icons";
-      src: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2?2820a38") format("woff2"),
-           url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff?2820a38") format("woff");
-      font-display: swap;
-    }
-    
-    .price-area { color: #000 !important; font-weight: 700 !important; background-color: rgba(255,255,255,0.85) !important; padding: 2px 5px; border-radius: 4px; }
-    .price-list-overlay { background-color: rgba(0, 0, 0, 0.75) !important; }
-  </style>
 
-  <!-- Custom CSS -->
+      @media (min-width: 768px) {
+        .gsap-loading .header-logo,
+        .gsap-loading .header-divider {
+          visibility: hidden;
+        }
+      }
 
-  <link href="styles.css?v=2" rel="stylesheet" />
+      /* Accessibility Contrast Fixes */
+      .gallery-watermark-label,
+      .watermark-label {
+        color: #fff !important;
+        background-color: rgba(0, 0, 0, 0.85) !important;
+        text-shadow: 0 0 2px #000 !important;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      /* Font Display Swap Override */
+      @font-face {
+        font-family: "bootstrap-icons";
+        src:
+          url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff2?2820a38")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/fonts/bootstrap-icons.woff?2820a38")
+            format("woff");
+        font-display: swap;
+      }
 
-  <title>
-    SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida
-  </title>
+      .price-area {
+        color: #000 !important;
+        font-weight: 700 !important;
+        background-color: rgba(255, 255, 255, 0.85) !important;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+      .price-list-overlay {
+        background-color: rgba(0, 0, 0, 0.75) !important;
+      }
+    </style>
 
-  <meta name="keywords"
-    content="SYNQ Apartments, SYNQ Apartments Greater Noida, 1 & 2 BHK Apartments in Greater Noida, Yatharth Family Office, Great Value Realty, NBCC Aspire" />
+    <!-- Custom CSS -->
 
-  <meta name="description"
-    content="Explore SYNQ Apartments in Tech Zone 4, offering modern 1 & 2 BHK Studio apartments in Greater Noida, perfect for modern living. Book Now!" />
+    <link rel="preload" as="style" href="styles.css?v=2" />
+    <link
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+      href="styles.css?v=2"
+    />
 
-  <meta name="google-site-verification" content="Ma-arPYmEe7u20NJ-jsuiHjD1p2HSShiEPD4m8s3bL8" />
+    <title>
+      SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida
+    </title>
 
-  <link rel="canonical" href="https://highlife.greatvaluerealty.com/" />
+    <meta
+      name="keywords"
+      content="SYNQ Apartments, SYNQ Apartments Greater Noida, 1 & 2 BHK Apartments in Greater Noida, Yatharth Family Office, Great Value Realty, NBCC Aspire"
+    />
 
-  <meta name="distribution" content="Global" />
+    <meta
+      name="description"
+      content="Explore SYNQ Apartments in Tech Zone 4, offering modern 1 & 2 BHK Studio apartments in Greater Noida, perfect for modern living. Book Now!"
+    />
 
-  <meta name="Language" content="English" />
+    <meta
+      name="google-site-verification"
+      content="Ma-arPYmEe7u20NJ-jsuiHjD1p2HSShiEPD4m8s3bL8"
+    />
 
-  <meta name="doc-type" content="Public" />
+    <link rel="canonical" href="https://highlife.greatvaluerealty.com/" />
 
-  <meta name="robots" content="index, follow" />
+    <meta name="distribution" content="Global" />
 
-  <meta name="author" content="SYNQ Apartments" />
+    <meta name="Language" content="English" />
 
-  <meta name="googlebot" content="all, index, follow" />
+    <meta name="doc-type" content="Public" />
 
-  <meta name="YahooSeeker" content="all, index, follow" />
+    <meta name="robots" content="index, follow" />
 
-  <meta name="msnbot" content="all, index, follow" />
+    <meta name="author" content="SYNQ Apartments" />
 
-  <meta name="HandheldFriendly" content="true" />
+    <meta name="googlebot" content="all, index, follow" />
 
-  <meta name="revisit-after" content="1 days" />
+    <meta name="YahooSeeker" content="all, index, follow" />
 
-  <meta name="rating" content="safe for kids" />
+    <meta name="msnbot" content="all, index, follow" />
 
-  <meta name="expires" content="never" />
+    <meta name="HandheldFriendly" content="true" />
 
-  <meta property="og:type" content="website" />
+    <meta name="revisit-after" content="1 days" />
 
-  <meta property="og:title" content="SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida" />
+    <meta name="rating" content="safe for kids" />
 
-  <meta property="og:description"
-    content="Explore SYNQ Apartments in Tech Zone 4, offering modern 1 & 2 BHK Studio apartments in Greater Noida, perfect for modern living. Book Now!" />
+    <meta name="expires" content="never" />
 
-  <meta property="og:url" content="https://highlife.greatvaluerealty.com/" />
+    <meta property="og:type" content="website" />
 
-  <meta property="og:site_name" content="SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida" />
+    <meta
+      property="og:title"
+      content="SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida"
+    />
 
-  <meta property="og:image" content="https://highlife.greatvaluerealty.com/" />
+    <meta
+      property="og:description"
+      content="Explore SYNQ Apartments in Tech Zone 4, offering modern 1 & 2 BHK Studio apartments in Greater Noida, perfect for modern living. Book Now!"
+    />
 
-  <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="https://highlife.greatvaluerealty.com/" />
 
-  <meta name="twitter:site" content="@SYNQApartments" />
+    <meta
+      property="og:site_name"
+      content="SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida"
+    />
 
-  <meta name="twitter:title" content="SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida" />
+    <meta
+      property="og:image"
+      content="https://highlife.greatvaluerealty.com/"
+    />
 
-  <meta name="twitter:description"
-    content="Explore SYNQ Apartments in Tech Zone 4, offering modern 1 & 2 BHK Studio apartments in Greater Noida, perfect for modern living. Book Now!" />
+    <meta name="twitter:card" content="summary" />
 
-  <meta name="twitter:creator" content="@SYNQApartments" />
+    <meta name="twitter:site" content="@SYNQApartments" />
 
-  <meta name="twitter:image" content="https://highlife.greatvaluerealty.com/assets/images/hero/High_Life.svg" />
+    <meta
+      name="twitter:title"
+      content="SYNQ Tech Zone 4: 1 & 2 BHK Studio Apartments in Greater Noida"
+    />
 
-  <!--End of Twitter TH data -->
+    <meta
+      name="twitter:description"
+      content="Explore SYNQ Apartments in Tech Zone 4, offering modern 1 & 2 BHK Studio apartments in Greater Noida, perfect for modern living. Book Now!"
+    />
 
-  <script type="application/ld+json">
+    <meta name="twitter:creator" content="@SYNQApartments" />
+
+    <meta
+      name="twitter:image"
+      content="https://highlife.greatvaluerealty.com/assets/images/hero/High_Life.svg"
+    />
+
+    <!--End of Twitter TH data -->
+
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
 
@@ -208,147 +301,195 @@
       }
     </script>
 
-  <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 
-  <!-- Loaded on first user interaction, or shortly after page load as a fallback,
+    <!-- Loaded on first user interaction, or shortly after page load as a fallback,
        so it does not compete with the first render -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      var loaded = false;
-      var events = ["scroll", "pointerdown", "touchstart", "keydown", "mousemove"];
-      function loadGTM() {
-        if (loaded) return;
-        loaded = true;
-        events.forEach(function (e) { w.removeEventListener(e, loadGTM); });
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      }
-      events.forEach(function (e) { w.addEventListener(e, loadGTM, { passive: true, once: true }); });
-      w.addEventListener("load", function () { setTimeout(loadGTM, 5000); });
-    })(window, document, "script", "dataLayer", "GTM-52K5MJL2");
-  </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        var loaded = false;
+        var events = [
+          "scroll",
+          "pointerdown",
+          "touchstart",
+          "keydown",
+          "mousemove",
+        ];
+        function loadGTM() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) {
+            w.removeEventListener(e, loadGTM);
+          });
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        }
+        events.forEach(function (e) {
+          w.addEventListener(e, loadGTM, { passive: true, once: true });
+        });
+        w.addEventListener("load", function () {
+          setTimeout(loadGTM, 5000);
+        });
+      })(window, document, "script", "dataLayer", "GTM-52K5MJL2");
+    </script>
 
-  <!-- End Google Tag Manager -->
-</head>
+    <!-- End Google Tag Manager -->
+  </head>
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
+  <body>
+    <!-- Google Tag Manager (noscript) -->
 
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52K5MJL2" height="0" width="0"
-      style="visibility: hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-52K5MJL2"
+        height="0"
+        width="0"
+        style="visibility: hidden"
+      ></iframe
+    ></noscript>
 
-  <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Sidebar -->
+    <!-- Sidebar -->
 
-  <div class="sidebar">
-    <!-- <img src="assets/images/pattern1.png" alt="Logo" class="sidebar-logo"> -->
+    <div class="sidebar">
+      <!-- <img src="assets/images/pattern1.png" alt="Logo" class="sidebar-logo"> -->
 
-    <div class="center">
-      <!-- <img src="assets/images/sidebar/hl.png" alt="Hl Logo" class="sidebar-e-logo"> -->
+      <div class="center">
+        <!-- <img src="assets/images/sidebar/hl.png" alt="Hl Logo" class="sidebar-e-logo"> -->
 
-      <div class="hamburger-menu" id="hamburgerMenu">
-        <span></span>
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <span></span>
 
-        <span></span>
+          <span></span>
 
-        <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="sidebar-text">
+        <img src="assets/images/logo/logo_dark.svg" alt="" />
       </div>
     </div>
 
-    <div class="sidebar-text">
-      <img src="assets/images/logo/logo_dark.svg" alt="" />
+    <!-- Sidebar Menu -->
+
+    <div class="sidebar-menu" id="sidebarMenu">
+      <button
+        class="sidebar-close-btn d-md-none"
+        id="sidebarCloseBtn"
+        aria-label="Close Sidebar"
+      >
+        <i class="bi bi-x"></i>
+      </button>
+
+      <div class="sidebar-builder-logo">
+        <!-- <img src="assets/images/logo/great_value.png" alt="Great Value" class="header-logo gvr_logo main_logo light-logo d-none d-md-block"> -->
+
+        <img
+          src="assets/images/logo/great_value_dark.webp"
+          alt="Great Value"
+          class="header-logo gvr_logo main_logo dark-logo"
+        />
+
+        <div class="header-divider"></div>
+
+        <!-- <img src="assets/images/logo/yatharth.png" alt="Yatharth" class="header-logo yatharth_main_logo light-logo d-none"> -->
+
+        <img
+          src="assets/images/logo/yatharth_dark.webp"
+          alt="Yatharth"
+          class="header-logo yatharth_main_logo dark-logo"
+        />
+      </div>
+
+      <ul class="list-unstyled">
+        <li><a href="#hero-section" class="text-dark nav-link">HOME</a></li>
+
+        <li>
+          <a href="#overview-section" class="text-dark nav-link">ABOUT US</a>
+        </li>
+
+        <li>
+          <a href="#highlights-section" class="text-dark nav-link"
+            >HIGHLIGHTS</a
+          >
+        </li>
+
+        <li>
+          <a href="#price-list-section" class="text-dark nav-link"
+            >PRICE LIST</a
+          >
+        </li>
+
+        <!-- <li><a href="#amenities-section" class="text-dark nav-link">AMENITIES</a></li> -->
+
+        <li>
+          <a href="#location-section" class="text-dark nav-link">LOCATION</a>
+        </li>
+
+        <li>
+          <a href="#floor-plans-section" class="text-dark nav-link"
+            >FLOOR PLAN</a
+          >
+        </li>
+
+        <!-- <li><a href="#gallery-section" class="text-dark nav-link">GALLERY</a></li> -->
+
+        <li><a href="#contact-us" class="text-dark nav-link">CONTACT US</a></li>
+
+        <li>
+          <a href="#footer-section" class="text-dark nav-link"
+            >ABOUT DEVELOPER</a
+          >
+        </li>
+      </ul>
     </div>
-  </div>
 
-  <!-- Sidebar Menu -->
+    <!-- Header -->
 
-  <div class="sidebar-menu" id="sidebarMenu">
-    <button class="sidebar-close-btn d-md-none" id="sidebarCloseBtn" aria-label="Close Sidebar">
-      <i class="bi bi-x"></i>
-    </button>
+    <header class="header">
+      <div class="container-fluid px-0">
+        <div class="row">
+          <div class="col-6 d-flex align-items-start">
+            <div class="_logo">
+              <img
+                src="assets/images/logo/great_value.png"
+                alt="Great Value"
+                class="header-logo gvr_logo main_logo light-logo d-none d-md-block"
+              />
 
-    <div class="sidebar-builder-logo">
-      <!-- <img src="assets/images/logo/great_value.png" alt="Great Value" class="header-logo gvr_logo main_logo light-logo d-none d-md-block"> -->
+              <img
+                src="assets/images/logo/great_value_dark.webp"
+                alt="Great Value"
+                class="header-logo gvr_logo main_logo dark-logo d-md-none"
+              />
 
-      <img src="assets/images/logo/great_value_dark.webp" alt="Great Value"
-        class="header-logo gvr_logo main_logo dark-logo" />
+              <div class="header-divider"></div>
 
-      <div class="header-divider"></div>
+              <img
+                src="assets/images/logo/yatharth.png"
+                alt="Yatharth"
+                class="header-logo yatharth_main_logo light-logo d-none d-md-block"
+              />
 
-      <!-- <img src="assets/images/logo/yatharth.png" alt="Yatharth" class="header-logo yatharth_main_logo light-logo d-none"> -->
-
-      <img src="assets/images/logo/yatharth_dark.webp" alt="Yatharth"
-        class="header-logo yatharth_main_logo dark-logo" />
-    </div>
-
-    <ul class="list-unstyled">
-      <li><a href="#hero-section" class="text-dark nav-link">HOME</a></li>
-
-      <li>
-        <a href="#overview-section" class="text-dark nav-link">ABOUT US</a>
-      </li>
-
-      <li>
-        <a href="#highlights-section" class="text-dark nav-link">HIGHLIGHTS</a>
-      </li>
-
-      <li>
-        <a href="#price-list-section" class="text-dark nav-link">PRICE LIST</a>
-      </li>
-
-      <!-- <li><a href="#amenities-section" class="text-dark nav-link">AMENITIES</a></li> -->
-
-      <li>
-        <a href="#location-section" class="text-dark nav-link">LOCATION</a>
-      </li>
-
-      <li>
-        <a href="#floor-plans-section" class="text-dark nav-link">FLOOR PLAN</a>
-      </li>
-
-      <!-- <li><a href="#gallery-section" class="text-dark nav-link">GALLERY</a></li> -->
-
-      <li><a href="#contact-us" class="text-dark nav-link">CONTACT US</a></li>
-
-      <li>
-        <a href="#footer-section" class="text-dark nav-link">ABOUT DEVELOPER</a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Header -->
-
-  <header class="header">
-    <div class="container-fluid px-0">
-      <div class="row">
-        <div class="col-6 d-flex align-items-start">
-          <div class="_logo">
-            <img src="assets/images/logo/great_value.png" alt="Great Value"
-              class="header-logo gvr_logo main_logo light-logo d-none d-md-block" />
-
-            <img src="assets/images/logo/great_value_dark.webp" alt="Great Value"
-              class="header-logo gvr_logo main_logo dark-logo d-md-none" />
-
-            <div class="header-divider"></div>
-
-            <img src="assets/images/logo/yatharth.png" alt="Yatharth"
-              class="header-logo yatharth_main_logo light-logo d-none d-md-block" />
-
-            <img src="assets/images/logo/yatharth_dark.webp" alt="Yatharth"
-              class="header-logo yatharth_main_logo dark-logo d-md-none" />
+              <img
+                src="assets/images/logo/yatharth_dark.webp"
+                alt="Yatharth"
+                class="header-logo yatharth_main_logo dark-logo d-md-none"
+              />
+            </div>
           </div>
-        </div>
 
-        <div class="col-6 d-flex justify-content-end align-items-center">
-          <div class="header-buttons">
-            <!-- <button class="btn btn-video">
+          <div class="col-6 d-flex justify-content-end align-items-center">
+            <div class="header-buttons">
+              <!-- <button class="btn btn-video">
 
                     Video
 
@@ -356,81 +497,124 @@
 
                   </button> -->
 
-            <button class="btn btn-brochure" data-bs-toggle="modal" data-bs-target="#brochureModal">
-              Brochure
+              <button
+                class="btn btn-brochure"
+                data-bs-toggle="modal"
+                data-bs-target="#brochureModal"
+              >
+                Brochure
 
-              <i class="bi bi-download"></i>
-            </button>
-          </div>
+                <i class="bi bi-download"></i>
+              </button>
+            </div>
 
-          <div class="mobile-menu-toggle d-md-none">
-            <div class="hamburger-menu" id="mobileHamburgerMenu">
-              <span></span>
+            <div class="mobile-menu-toggle d-md-none">
+              <div class="hamburger-menu" id="mobileHamburgerMenu">
+                <span></span>
 
-              <span></span>
+                <span></span>
 
-              <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-      <!-- Main Content -->
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <!-- Main Content -->
 
-      <main class="main-content">
-        <!-- Hero Section -->
+        <main class="main-content">
+          <!-- Hero Section -->
 
-        <section class="hero-section" id="hero-section">
-          <div class="container-fluid px-0">
-            <div class="row">
-              <div class="col-md-6 hero-left-col">
-                <img src="assets/images/hero/banner_img-914.webp"
-                  srcset="assets/images/hero/banner_img-480.webp 480w, assets/images/hero/banner_img-828.webp 828w, assets/images/hero/banner_img-914.webp 914w"
-                  sizes="(max-width: 767px) 100vw, 50vw" width="914" height="917" fetchpriority="high"
-                  alt="Hero Left Image" class="hero-left-image" />
-              </div>
+          <section class="hero-section" id="hero-section">
+            <div class="container-fluid px-0">
+              <div class="row">
+                <div class="col-md-6 hero-left-col">
+                  <img
+                    src="assets/images/hero/banner_img-914.webp"
+                    srcset="
+                      assets/images/hero/banner_img-480.webp 480w,
+                      assets/images/hero/banner_img-828.webp 828w,
+                      assets/images/hero/banner_img-914.webp 914w
+                    "
+                    sizes="(max-width: 767px) 100vw, 50vw"
+                    width="914"
+                    height="917"
+                    fetchpriority="high"
+                    alt="Hero Left Image"
+                    class="hero-left-image"
+                  />
+                </div>
 
-              <div class="col-md-6 hero-right-col">
-                <!-- <img src="assets/images/hero/multi_flowers.png" alt="Flowers" class="hero-multi-flowers" style="z-index: 0 !important;"> -->
+                <div class="col-md-6 hero-right-col">
+                  <!-- <img src="assets/images/hero/multi_flowers.png" alt="Flowers" class="hero-multi-flowers" style="z-index: 0 !important;"> -->
 
-                <div class="hero-content">
-                  <img src="assets/images/logo/logo_dark.svg" alt="SYNQ" class="hero-title-image" />
+                  <div class="hero-content">
+                    <img
+                      src="assets/images/logo/logo_dark.svg"
+                      alt="SYNQ"
+                      class="hero-title-image"
+                    />
 
-                  <h1 class="tagline">Luxury, Now Powered By Intelligence</h1>
-                  <div class="hero-typology">
-                    <h2 class="h5">
-                      1 & 2 BHK IQ Suites by High Life
-                    </h2>
-                    <p> AI-optimised homes designed around the way you live.</p>
-                  </div>
-
-                  <!-- <p class="sub_tagline">130 meters of access, 100 meters of green.</p> -->
-
-                  <div class="hero-description">
-                    <div class="patch-price">
-                      <p>Starting ₹90 Lakhs*</p>
+                    <h1 class="tagline">Luxury, Now Powered By Intelligence</h1>
+                    <div class="hero-typology">
+                      <h2 class="h5">1 & 2 BHK IQ Suites by High Life</h2>
+                      <p>
+                        AI-optimised homes designed around the way you live.
+                      </p>
                     </div>
 
-                    <h3 class="sizes">
-                      POWERED BY:
-                      <span><img loading="lazy" decoding="async" class="sponsered_logo1" src="assets/images/logo/cleub.webp" alt="" /></span>
-                      FURNISHED BY:
-                      <img loading="lazy" decoding="async" class="sponsered_logo2" src="assets/images/logo/IKEA.webp" alt="" />
-                    </h3>
+                    <!-- <p class="sub_tagline">130 meters of access, 100 meters of green.</p> -->
 
-                    <div class="patch">
-                      <!-- <p>Payment Plan</p>
+                    <div class="hero-description">
+                      <div class="patch-price">
+                        <p>Starting ₹90 Lakhs*</p>
+                      </div>
+
+                      <h3 class="sizes">
+                        POWERED BY:
+                        <span
+                          ><img
+                            loading="lazy"
+                            decoding="async"
+                            class="sponsered_logo1"
+                            src="assets/images/logo/cleub.webp"
+                            alt=""
+                        /></span>
+                        FURNISHED BY:
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          class="sponsered_logo2"
+                          src="assets/images/logo/IKEA.webp"
+                          alt=""
+                        />
+                      </h3>
+
+                      <div class="patch">
+                        <!-- <p>Payment Plan</p>
 
                       <p class="save">PAY 40 & GET 40</p> -->
 
-                      <img loading="lazy" decoding="async" class="img-fluid pay_patch" src="assets/images/pay_40.webp" alt="" />
-                    </div>
+                        <picture>
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="assets/images/pay_40_sm.webp"
+                          />
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            class="img-fluid pay_patch"
+                            src="assets/images/pay_40.webp"
+                            alt=""
+                          />
+                        </picture>
+                      </div>
 
-                    <!-- <div class="hero-keyhighlights-box">
+                      <!-- <div class="hero-keyhighlights-box">
                         <div class="hero-keyhighlights-box-2">
                           <h4 class="heading-top-1">OFFER BENEFITS</h4>
                         </div>
@@ -447,27 +631,41 @@
                         </ul>
                       </div> -->
 
-                    <div class="hero-address">
-                      <img loading="lazy" decoding="async" src="assets/images/icons/location.png" alt="Location" class="location" />
+                      <div class="hero-address">
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/icons/location.png"
+                          alt="Location"
+                          class="location"
+                        />
 
-                      Dream Valley Tech Zone IV, Greater Noida (W)
-                    </div>
-                    <div class="mx-auto">
-                      <button class="hero-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                        ENQUIRE NOW
-                      </button>
-                      <a href="https://youtu.be/88Euuix_8Mw" target="_blank">
-                        <button class="hero-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                          LOCATION CONNECTIVITY
+                        Dream Valley Tech Zone IV, Greater Noida (W)
+                      </div>
+                      <div class="mx-auto">
+                        <button
+                          class="hero-btn"
+                          data-bs-toggle="modal"
+                          data-bs-target="#enquiryModal"
+                        >
+                          ENQUIRE NOW
                         </button>
-                      </a>
+                        <a href="https://youtu.be/88Euuix_8Mw" target="_blank">
+                          <button
+                            class="hero-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#enquiryModal"
+                          >
+                            LOCATION CONNECTIVITY
+                          </button>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- <img src="assets/images/hero/arrow_down.png" alt="Scroll Down" class="hero-arrow"> -->
+                  <!-- <img src="assets/images/hero/arrow_down.png" alt="Scroll Down" class="hero-arrow"> -->
 
-                <!-- <div class="hero-buttons">
+                  <!-- <div class="hero-buttons">
 
                   <button class="hero-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">ENQUIRE NOW</button>
 
@@ -476,42 +674,65 @@
                   <button class="hero-btn d-none d-md-block" data-bs-toggle="modal" data-bs-target="#enquiryModal">BOOK NOW</button>
 
                 </div> -->
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Overview Section -->
+          <!-- Overview Section -->
 
-        <section class="overview-section" id="overview-section">
-          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Overview Background" class="overview-bg" />
+          <section class="overview-section" id="overview-section">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="assets/images/pattern_sm.webp"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="assets/images/pattern.webp"
+                alt="Overview Background"
+                class="overview-bg"
+              />
+            </picture>
 
-          <div class="overview-overlay"></div>
+            <div class="overview-overlay"></div>
 
-          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Flower" class="overview-flower">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="assets/images/pattern_sm.webp"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="assets/images/pattern.webp"
+                alt="Flower"
+                class="overview-flower"
+              />
+            </picture>
 
-          <div class="container">
-            <div class="overview-content">
-              <h2 class="overview-subtitle h5">About Us</h2>
+            <div class="container">
+              <div class="overview-content">
+                <h2 class="overview-subtitle h5">About Us</h2>
 
-              <h3 class="overview-title h2">
-                A HOME THAT WORKS AROUND YOU.
-              </h3>
+                <h3 class="overview-title h2">A HOME THAT WORKS AROUND YOU.</h3>
 
-              <p class="overview-description">
-                SYNQ introduces 1 & 2 BHK IQ Suites by High Life - AI-optimised homes designed to make everyday living
-                more intuitive. From lighting and climate to curtains and security, connected functions come together to
-                respond to a touch, a command or a routine.
-              </p>
-              <!-- <p class="overview-description py-2">
+                <p class="overview-description">
+                  SYNQ introduces 1 & 2 BHK IQ Suites by High Life -
+                  AI-optimised homes designed to make everyday living more
+                  intuitive. From lighting and climate to curtains and security,
+                  connected functions come together to respond to a touch, a
+                  command or a routine.
+                </p>
+                <!-- <p class="overview-description py-2">
                  YOUR HOME. YOUR ROUTINE. YOUR LIFE. ALL IN SYNQ.
                 </p> -->
-              <!-- <p class="overview-description">
+                <!-- <p class="overview-description">
                  G+18 Floors | Powered by CLEUB Automation | Fully Furnished by IKEA | Prime Greater Noida West Location
                 </p> -->
 
-
-              <!-- <div class="overview-counters">
+                <!-- <div class="overview-counters">
 
                 <div class="counter-item">
 
@@ -546,12 +767,12 @@
                 </div>
 
               </div> -->
+              </div>
             </div>
-          </div>
 
-          <div class="container">
-            <div class="row">
-              <!-- <div class="col-md-6">
+            <div class="container">
+              <div class="row">
+                <!-- <div class="col-md-6">
 
                 <div class="high-life-one">
 
@@ -577,9 +798,9 @@
 
               </div> -->
 
-              <div class="col-md-12 pt-4 justify-content-center">
-                <div class="high-life-one">
-                  <!-- <div class="image-sec">
+                <div class="col-md-12 pt-4 justify-content-center">
+                  <div class="high-life-one">
+                    <!-- <div class="image-sec">
 
                     <img class="img-fluid" src="assets/images/logo/logo_light.svg" alt="">
 
@@ -587,441 +808,683 @@
 
                   </div> -->
 
-                  <div class="details-sec">
-                    <div class="specs">
-                      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/building.png" alt="" />
-                      <p><span>Building Height</span> G+18 Floors</p>
-                    </div>
+                    <div class="details-sec">
+                      <div class="specs">
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          class="img-fluid"
+                          src="assets/images/building.png"
+                          alt=""
+                        />
+                        <p><span>Building Height</span> G+18 Floors</p>
+                      </div>
 
-                    <div class="specs">
-                      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/commercial.png" alt="" />
-                      <p><span>Commercial</span> G+4 Floors</p>
-                    </div>
+                      <div class="specs">
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          class="img-fluid"
+                          src="assets/images/commercial.png"
+                          alt=""
+                        />
+                        <p><span>Commercial</span> G+4 Floors</p>
+                      </div>
 
-                    <div class="specs">
-                      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/residential.png" alt="" />
-                      <p><span>Residential</span> 5th - 18th Floors</p>
+                      <div class="specs">
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          class="img-fluid"
+                          src="assets/images/residential.png"
+                          alt=""
+                        />
+                        <p><span>Residential</span> 5th - 18th Floors</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Highlights Section -->
+          <!-- Highlights Section -->
 
-        <section class="highlights-section" id="highlights-section">
-          <img loading="lazy" decoding="async" src="assets/images/highlights/bg.webp" alt="Highlights Background" class="highlights-bg" />
+          <section class="highlights-section" id="highlights-section">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/highlights/bg.webp"
+              alt="Highlights Background"
+              class="highlights-bg"
+            />
 
-          <!-- <img src="assets/images/pattern2.png" alt="Flower" class="highlights-flower"> -->
+            <!-- <img src="assets/images/pattern2.png" alt="Flower" class="highlights-flower"> -->
 
-          <!-- <img src="assets/images/multi_flowers.png" alt="Flower" class="multi_flowers" /> -->
+            <!-- <img src="assets/images/multi_flowers.png" alt="Flower" class="multi_flowers" /> -->
 
-          <div class="container">
-            <h2 class="highlights-subtitle h5">Highlights</h2>
+            <div class="container">
+              <h2 class="highlights-subtitle h5">Highlights</h2>
 
-            <h3 class="highlights-title h2">EVERYTHING. IN PERFECT SYNQ.</h3>
+              <h3 class="highlights-title h2">EVERYTHING. IN PERFECT SYNQ.</h3>
 
-            <div class="highlights_content">
-              <div class="row align-items-center mx_-80 mx_lg_-40">
-                <div class="col-lg-6 px_lg_40">
-                  <a href="assets/images/highlights/1.webp" class="highlight-preview-link" data-fancybox="highlight">
-                    <img loading="lazy" decoding="async" src="assets/images/highlights/1.webp" alt="Highlights"
-                      class="highlights-image" />
-                    <span class="watermark-label">AI Generated</span>
-                  </a>
-                </div>
+              <div class="highlights_content">
+                <div class="row align-items-center mx_-80 mx_lg_-40">
+                  <div class="col-lg-6 px_lg_40">
+                    <a
+                      href="assets/images/highlights/1.webp"
+                      class="highlight-preview-link"
+                      data-fancybox="highlight"
+                    >
+                      <picture>
+                        <source
+                          media="(max-width: 767px)"
+                          srcset="assets/images/highlights/1_sm.webp"
+                        />
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/highlights/1.webp"
+                          alt="Highlights"
+                          class="highlights-image"
+                        />
+                      </picture>
+                      <span class="watermark-label">AI Generated</span>
+                    </a>
+                  </div>
 
-                <div class="col-lg-6 px_60 px_lg_40">
-                  <table class="highlights-table">
-                    <tr class="highlight-row active" tabindex="0" data-image="assets/images/highlights/1.webp" data-label="AI Generated">
-                      <td class="icon-cell">
-                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/bulding.png" alt="bed icon" class="img-fluid" />
-                      </td>
+                  <div class="col-lg-6 px_60 px_lg_40">
+                    <table class="highlights-table">
+                      <tr
+                        class="highlight-row active"
+                        tabindex="0"
+                        data-image="assets/images/highlights/1.webp"
+                        data-label="AI Generated"
+                      >
+                        <td class="icon-cell">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/highlights/icons/bulding.png"
+                            alt="bed icon"
+                            class="img-fluid"
+                          />
+                        </td>
 
-                      <td class="text-cell">
-                        <b>SMART AMBIENCE, SET YOUR WAY</b> <br />
-                        Lighting and curtains that adjust to suit your mood and routine.
-                      </td>
-                    </tr>
+                        <td class="text-cell">
+                          <b>SMART AMBIENCE, SET YOUR WAY</b> <br />
+                          Lighting and curtains that adjust to suit your mood
+                          and routine.
+                        </td>
+                      </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/2.webp" data-label="AI Generated">
-                      <td class="icon-cell">
-                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/control.png" alt="grass icon" class="img-fluid" />
-                      </td>
+                      <tr
+                        class="highlight-row"
+                        tabindex="0"
+                        data-image="assets/images/highlights/2.webp"
+                        data-label="AI Generated"
+                      >
+                        <td class="icon-cell">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/highlights/icons/control.png"
+                            alt="grass icon"
+                            class="img-fluid"
+                          />
+                        </td>
 
-                      <td class="text-cell">
-                        <b>CONTROL, ALL IN ONE PLACE</b> <br />
-                        Manage your connected home effortlessly through touch or voice.
-                      </td>
-                    </tr>
+                        <td class="text-cell">
+                          <b>CONTROL, ALL IN ONE PLACE</b> <br />
+                          Manage your connected home effortlessly through touch
+                          or voice.
+                        </td>
+                      </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/3.webp" data-label="AI Generated">
-                      <td class="icon-cell">
-                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/balcony.png" alt="road icon" class="img-fluid" />
-                      </td>
+                      <tr
+                        class="highlight-row"
+                        tabindex="0"
+                        data-image="assets/images/highlights/3.webp"
+                        data-label="AI Generated"
+                      >
+                        <td class="icon-cell">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/highlights/icons/balcony.png"
+                            alt="road icon"
+                            class="img-fluid"
+                          />
+                        </td>
 
-                      <td class="text-cell">
-                        <b>A HOME THAT’S READY FOR YOU</b>
-                        <br />Climate, geofencing and preset modes that respond around your arrival and departure.
-                      </td>
-                    </tr>
+                        <td class="text-cell">
+                          <b>A HOME THAT’S READY FOR YOU</b>
+                          <br />Climate, geofencing and preset modes that
+                          respond around your arrival and departure.
+                        </td>
+                      </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/4.webp" data-label="AI Generated">
-                      <td class="icon-cell">
-                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/mobile.png" alt="bulding icon" class="img-fluid" />
-                      </td>
+                      <tr
+                        class="highlight-row"
+                        tabindex="0"
+                        data-image="assets/images/highlights/4.webp"
+                        data-label="AI Generated"
+                      >
+                        <td class="icon-cell">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/highlights/icons/mobile.png"
+                            alt="bulding icon"
+                            class="img-fluid"
+                          />
+                        </td>
 
-                      <td class="text-cell">
-                        <b>YOUR HOME, WITHIN REACH</b> <br />
-                        Stay connected to your home and view it remotely, wherever you are.
-                      </td>
-                    </tr>
+                        <td class="text-cell">
+                          <b>YOUR HOME, WITHIN REACH</b> <br />
+                          Stay connected to your home and view it remotely,
+                          wherever you are.
+                        </td>
+                      </tr>
 
-                    <tr class="highlight-row" tabindex="0" data-image="assets/images/highlights/5.webp" data-label="AI Generated">
-                      <td class="icon-cell">
-                        <img loading="lazy" decoding="async" src="assets/images/highlights/icons/sensor.png" alt="bulding icon" class="img-fluid" />
-                      </td>
+                      <tr
+                        class="highlight-row"
+                        tabindex="0"
+                        data-image="assets/images/highlights/5.webp"
+                        data-label="AI Generated"
+                      >
+                        <td class="icon-cell">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/highlights/icons/sensor.png"
+                            alt="bulding icon"
+                            class="img-fluid"
+                          />
+                        </td>
 
-                      <td class="text-cell">
-                        <b>SMARTER AWARENESS, EVEN WHEN AWAY</b> <br />Sensors and intelligent alerts keep you informed about activity at home.
-                      </td>
-                    </tr>
-
-                  </table>
+                        <td class="text-cell">
+                          <b>SMARTER AWARENESS, EVEN WHEN AWAY</b> <br />Sensors
+                          and intelligent alerts keep you informed about
+                          activity at home.
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
+          <!-- Gallery Section -->
 
-        <!-- Gallery Section -->
+          <section class="gallery-section" id="gallery-section">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="assets/images/gallery/bg_sm.webp"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="assets/images/gallery/bg.webp"
+                alt="Gallery Background"
+                class="gallery-bg"
+              />
+            </picture>
 
-        <section class="gallery-section" id="gallery-section">
+            <!-- <img src="assets/images/gallery/flower.png" alt="Gallery Flower" class="gallery-flower"> -->
 
-          <img loading="lazy" decoding="async" src="assets/images/gallery/bg.webp" alt="Gallery Background" class="gallery-bg">
+            <!-- <img src="assets/images/multi_flowers.png" alt="Multi Flowers" class="gallery-multi-flowers"> -->
 
-          <!-- <img src="assets/images/gallery/flower.png" alt="Gallery Flower" class="gallery-flower"> -->
+            <div class="container">
+              <h2 class="gallery-subtitle h5">Gallery</h2>
 
-          <!-- <img src="assets/images/multi_flowers.png" alt="Multi Flowers" class="gallery-multi-flowers"> -->
+              <h3 class="gallery-title h2">A CLOSER LOOK AT LIFE IN SYNQ.</h3>
+              <p class="gallery-paragraph">
+                Explore the spaces and intelligent features designed around you.
+              </p>
+              <!-- <h5 class="gallery-paragraph"> Exteriors | Interiors | IQ Features | Add-on Features</h5> -->
 
-          <div class="container">
-
-            <h2 class="gallery-subtitle h5">Gallery</h2>
-
-            <h3 class="gallery-title h2">A CLOSER LOOK AT LIFE IN SYNQ.</h3>
-            <p class="gallery-paragraph">
-              Explore the spaces and intelligent features designed around you.
-            </p>
-            <!-- <h5 class="gallery-paragraph"> Exteriors | Interiors | IQ Features | Add-on Features</h5> -->
-
-
-            <div class="gallery-slider-container">
-
-              <!~~ Swiper ~~>
+              <div class="gallery-slider-container">
+                <!~~ Swiper ~~>
 
                 <div class="swiper gallerySwiper">
-
                   <div class="swiper-wrapper">
-
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/1.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/1.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/1.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/1.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/1.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/1.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/2.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/2.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/2.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/2.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/2.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/2.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">Artistic Impression</span>
-
+                          <span class="gallery-watermark-label"
+                            >Artistic Impression</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/3.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/3.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/3.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/3.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/3.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/3.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">Artistic Impression</span>
-
+                          <span class="gallery-watermark-label"
+                            >Artistic Impression</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/4.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/4.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/4.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/4.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/4.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/4.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">Artistic Impression</span>
-
+                          <span class="gallery-watermark-label"
+                            >Artistic Impression</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/5.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/5.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/5.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/5.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/5.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/5.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">Artistic Impression</span>
-
+                          <span class="gallery-watermark-label"
+                            >Artistic Impression</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/6.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/6.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/6.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/6.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/6.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/6.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/7.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/7.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/7.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/7.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/7.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/7.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/8.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/8.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/8.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/8.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/8.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/8.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/9.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/9.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/9.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/9.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/9.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/9.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/10.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/10.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/10.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/10.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/10.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/10.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/11.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/11.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/11.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/11.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/11.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/11.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/12.png"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/12.png"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/12.png">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/12.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/12.png" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/12.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
 
                     <div class="swiper-slide">
-
                       <div class="gallery-slide">
+                        <a
+                          data-fancybox="gallery"
+                          href="assets/images/gallery/desk/13.webp"
+                        >
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/desk/13.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img d-none d-md-block"
+                          />
 
-                        <a data-fancybox="gallery" href="assets/images/gallery/desk/13.webp">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/gallery/mob/13.webp"
+                            alt="gallery image"
+                            class="img-fluid gallery_img_sm d-md-none"
+                          />
 
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/desk/13.webp" alt="gallery image"
-                            class="img-fluid gallery_img d-none d-md-block" />
-
-                          <img loading="lazy" decoding="async" src="assets/images/gallery/mob/13.webp" alt="gallery image"
-                            class="img-fluid gallery_img_sm d-md-none" />
-
-                          <span class="gallery-watermark-label">AI Generated</span>
-
+                          <span class="gallery-watermark-label"
+                            >AI Generated</span
+                          >
                         </a>
-
                       </div>
-
                     </div>
-
                   </div>
 
                   <!~~ Navigation buttons ~~>
 
-                    <div class="swiper-button-prev gallery-nav-prev"></div>
+                  <div class="swiper-button-prev gallery-nav-prev"></div>
 
-                    <div class="swiper-button-next gallery-nav-next"></div>
-
+                  <div class="swiper-button-next gallery-nav-next"></div>
                 </div>
-
+              </div>
             </div>
+          </section>
 
-          </div>
+          <!-- Price List Section -->
 
-        </section>
+          <section class="price-list-section" id="price-list-section">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="assets/images/pattern_sm.webp"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="assets/images/pattern.webp"
+                alt="Price List Background"
+                class="price-list-bg"
+              />
+            </picture>
 
+            <div class="price-list-overlay"></div>
 
-        <!-- Price List Section -->
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="assets/images/pattern_sm.webp"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="assets/images/pattern.webp"
+                alt="Flower"
+                class="price-list-flower"
+              />
+            </picture>
 
-        <section class="price-list-section" id="price-list-section">
-          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Price List Background" class="price-list-bg" />
+            <div class="container">
+              <h2 class="price-list-subtitle h5">Price List</h2>
 
-          <div class="price-list-overlay"></div>
+              <h3 class="price-list-title h2 mb-0">
+                PLANNED WITH INTELLIGENCE.
+              </h3>
 
-          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Flower" class="price-list-flower">
+              <p class="price-list-desc">
+                Thoughtfully designed spaces that make more efficient use of
+                every square foot.
+              </p>
 
-          <div class="container">
-            <h2 class="price-list-subtitle h5">Price List</h2>
-
-            <h3 class="price-list-title h2 mb-0">PLANNED WITH INTELLIGENCE.</h3>
-
-            <p class="price-list-desc">
-              Thoughtfully designed spaces that make more efficient use of every square foot.
-            </p>
-
-            <!-- <ul class="nav nav-pills price-nav floor-navs" id="pills-tab1" role="tablist">
+              <!-- <ul class="nav nav-pills price-nav floor-navs" id="pills-tab1" role="tablist">
 
               <li class="nav-item price-sec" role="presentation">
 
@@ -1037,8 +1500,8 @@
 
             </ul> -->
 
-            <div class="tab-content" id="pills-tabContent1">
-              <!-- <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1">
+              <div class="tab-content" id="pills-tabContent1">
+                <!-- <div class="tab-pane fade show active" id="pills-home1" role="tabpanel" aria-labelledby="pills-home-tab1">
 
                 <div class="price_content">
 
@@ -1088,57 +1551,69 @@
 
               </div> -->
 
-              <div class="tab-pane fade show active" id="pills-profile1" role="tabpanel"
-                aria-labelledby="pills-profile-tab1">
-                <div class="price_content">
-                  <div class="row justify-content-center mx_-80 mx_lg_-40">
-                    <div class="col-xl-6 col-lg-6 px_80 px_lg_40">
-                      <div class="price-box">
-                        <div class="price-type">1 BHK IQ SUITE</div>
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-profile1"
+                  role="tabpanel"
+                  aria-labelledby="pills-profile-tab1"
+                >
+                  <div class="price_content">
+                    <div class="row justify-content-center mx_-80 mx_lg_-40">
+                      <div class="col-xl-6 col-lg-6 px_80 px_lg_40">
+                        <div class="price-box">
+                          <div class="price-type">1 BHK IQ SUITE</div>
 
-                        <div class="price-area">964 sq. ft.</div>
+                          <div class="price-area">964 sq. ft.</div>
 
-                        <div class="price-amount">₹90 Lakhs onwards*</div>
+                          <div class="price-amount">₹90 Lakhs onwards*</div>
 
-                        <button class="price-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                          VIEW PRICING
-                        </button>
+                          <button
+                            class="price-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#enquiryModal"
+                          >
+                            VIEW PRICING
+                          </button>
 
-                        <p class="price-dis">
-                          Pre Launch offer available on the selected units
-                          only.
-                        </p>
+                          <p class="price-dis">
+                            Pre Launch offer available on the selected units
+                            only.
+                          </p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="col-xl-6 col-lg-6 px_80 px_lg_40">
-                      <div class="price-box border_top_sm_0">
-                        <div class="price-type">2 BHK IQ SUITE</div>
+                      <div class="col-xl-6 col-lg-6 px_80 px_lg_40">
+                        <div class="price-box border_top_sm_0">
+                          <div class="price-type">2 BHK IQ SUITE</div>
 
-                        <div class="price-area">1454 sq. ft.</div>
+                          <div class="price-area">1454 sq. ft.</div>
 
-                        <div class="price-amount">₹1.36 Cr onwards*</div>
+                          <div class="price-amount">₹1.36 Cr onwards*</div>
 
-                        <button class="price-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-                          VIEW PRICING
-                        </button>
+                          <button
+                            class="price-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#enquiryModal"
+                          >
+                            VIEW PRICING
+                          </button>
 
-                        <p class="price-dis">
-                          Pre Launch offer available on the selected units
-                          only.
-                        </p>
+                          <p class="price-dis">
+                            Pre Launch offer available on the selected units
+                            only.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Amenities Section -->
+          <!-- Amenities Section -->
 
-        <!--<section class="amenities-section" id="amenities-section">
+          <!--<section class="amenities-section" id="amenities-section">
 
           <img src="assets/images/amenities/bg.png" alt="Amenities Background" class="amenities-bg">
 
@@ -1730,397 +2205,580 @@
 
         </section>-->
 
-        <!-- Location Advantage Section -->
+          <!-- Location Advantage Section -->
 
-        <section class="location-section" id="location-section">
-          <img loading="lazy" decoding="async" src="assets/images/location_advantages/bg.webp" alt="Location Background" class="location-bg" />
+          <section class="location-section" id="location-section">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/location_advantages/bg.webp"
+              alt="Location Background"
+              class="location-bg"
+            />
 
-          <!-- <img src="assets/images/pattern1.png" alt="Location Flower" class="location-flower"> -->
+            <!-- <img src="assets/images/pattern1.png" alt="Location Flower" class="location-flower"> -->
 
-          <!-- <img src="assets/images/multi_flowers.png" alt="Multi Flowers" class="location-multi-flowers"> -->
+            <!-- <img src="assets/images/multi_flowers.png" alt="Multi Flowers" class="location-multi-flowers"> -->
 
-          <div class="container">
-            <h2 class="location-subtitle h5">Location Map</h2>
+            <div class="container">
+              <h2 class="location-subtitle h5">Location Map</h2>
 
-            <h3 class="location-title h2">CONNECTED TO WHERE LIFE IS GOING.</h3>
+              <h3 class="location-title h2">
+                CONNECTED TO WHERE LIFE IS GOING.
+              </h3>
 
-            <p class="location-description">
-              Located in the most connected, developed, and livable sector of
-              Greater Noida West—yet free from crowding.
-            </p>
+              <p class="location-description">
+                Located in the most connected, developed, and livable sector of
+                Greater Noida West—yet free from crowding.
+              </p>
 
-            <!-- Nav tabs -->
+              <!-- Nav tabs -->
 
-            <ul class="nav nav-tabs justify-content-center location-tabs" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">
-                  Health Care
-                </button>
-              </li>
+              <ul
+                class="nav nav-tabs justify-content-center location-tabs"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home"
+                    type="button"
+                    role="tab"
+                  >
+                    Health Care
+                  </button>
+                </li>
 
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu1" type="button" role="tab">
-                  School & Colleges
-                </button>
-              </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#menu1"
+                    type="button"
+                    role="tab"
+                  >
+                    School & Colleges
+                  </button>
+                </li>
 
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu3" type="button" role="tab">
-                  Business Hubs
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu2" type="button" role="tab">
-                  Shopping
-                </button>
-              </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#menu3"
+                    type="button"
+                    role="tab"
+                  >
+                    Business Hubs
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#menu2"
+                    type="button"
+                    role="tab"
+                  >
+                    Shopping
+                  </button>
+                </li>
 
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu4" type="button" role="tab">
-                  Entertainment & Recreation
-                </button>
-              </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#menu4"
+                    type="button"
+                    role="tab"
+                  >
+                    Entertainment & Recreation
+                  </button>
+                </li>
 
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu5" type="button" role="tab">
-                  Air Connectivity
-                </button>
-              </li>
-            </ul>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#menu5"
+                    type="button"
+                    role="tab"
+                  >
+                    Air Connectivity
+                  </button>
+                </li>
+              </ul>
 
-            <div class="location_content">
-              <div class="row align-items-center mx_-40">
-                <div class="col-lg-6 px_40">
-                  <div class="location-map">
-                    <a href="assets/images/location_advantages/location-map.webp" data-fancybox="location-map">
-                      <img loading="lazy" decoding="async" src="assets/images/location_advantages/location-map.webp" alt="Location Map"
-                        class="map-image" />
-                    </a>
+              <div class="location_content">
+                <div class="row align-items-center mx_-40">
+                  <div class="col-lg-6 px_40">
+                    <div class="location-map">
+                      <a
+                        href="assets/images/location_advantages/location-map.webp"
+                        data-fancybox="location-map"
+                      >
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/location_advantages/location-map.webp"
+                          alt="Location Map"
+                          class="map-image"
+                        />
+                      </a>
+                    </div>
                   </div>
-                </div>
 
-                <div class="col-lg-6 px_20">
-                  <!-- Tab panes -->
+                  <div class="col-lg-6 px_20">
+                    <!-- Tab panes -->
 
-                  <div class="tab-content">
-                    <div class="tab-pane container active" id="home">
-                      <div class="location-table">
-                        <table>
-                          <tr>
-                            <!--          <td class="icon-cell">
+                    <div class="tab-content">
+                      <div class="tab-pane container active" id="home">
+                        <div class="location-table">
+                          <table>
+                            <tr>
+                              <!--          <td class="icon-cell">
 
                                      <img src="assets/images/location_advantages/icons/hospital.png" alt="Road">
 
                                   </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location"
-                                class="location-icon" />Numed Super Speciality Hospital - 3.5 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />Numed Super Speciality Hospital - 3.5 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--      <td class="icon-cell">
+                            <tr>
+                              <!--      <td class="icon-cell">
 
                                      <img src="assets/images/location_advantages/icons/hospital.png" alt="grass" />
 
                                   </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Yatharth Super Speciality Hospital - 4 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Yatharth Super Speciality Hospital - 4 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--        <td class="icon-cell">
+                            <tr>
+                              <!--        <td class="icon-cell">
 
                                      <img src="assets/images/location_advantages/icons/park.png" alt="Connectivity">
 
                                   </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Kailash Hospital - 10 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Kailash Hospital - 10 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--      <td class="icon-cell">
+                            <tr>
+                              <!--      <td class="icon-cell">
 
                                      <img src="assets/images/location_advantages/icons/school.png" alt="subway">
 
                                   </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Fortis Hospital - 11 kms
-                            </td>
-                          </tr>
-                        </table>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Fortis Hospital - 11 kms
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="tab-pane container fade" id="menu1">
-                      <div class="location-table">
-                        <table>
-                          <tr>
-                            <!--       <td class="icon-cell">
+                      <div class="tab-pane container fade" id="menu1">
+                        <div class="location-table">
+                          <table>
+                            <tr>
+                              <!--       <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/hospital.png" alt="Road">
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location"
-                                class="location-icon" />The Shri Ram Universal School - 3.5 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />The Shri Ram Universal School - 3.5 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--     <td class="icon-cell">
+                            <tr>
+                              <!--     <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/hospital.png" alt="grass" />
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Ryan International School - 4 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Ryan International School - 4 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--       <td class="icon-cell">
+                            <tr>
+                              <!--       <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/park.png" alt="Connectivity">
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Pacific World School - 10 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Pacific World School - 10 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--     <td class="icon-cell">
-
-                                   <img src="assets/images/location_advantages/icons/school.png" alt="subway">
-
-                                </td> -->
-
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Lotus Valley International School - 11 kms
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <!--        <td class="icon-cell">
+                            <tr>
+                              <!--     <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/school.png" alt="subway">
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              JBM Smart Start - 11 kms
-                            </td>
-                          </tr>
-                        </table>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Lotus Valley International School - 11 kms
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <!--        <td class="icon-cell">
+
+                                   <img src="assets/images/location_advantages/icons/school.png" alt="subway">
+
+                                </td> -->
+
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                JBM Smart Start - 11 kms
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="tab-pane container fade" id="menu2">
-                      <div class="location-table">
-                        <table>
-                          <tr>
-                            <!--       <td class="icon-cell">
+                      <div class="tab-pane container fade" id="menu2">
+                        <div class="location-table">
+                          <table>
+                            <tr>
+                              <!--       <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/hospital.png" alt="Road">
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              D-Mart - 3 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                D-Mart - 3 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!-- <td class="icon-cell">
+                            <tr>
+                              <!-- <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/hospital.png" alt="grass" />
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Gaur City Center & Mall - 4 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Gaur City Center & Mall - 4 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--     <td class="icon-cell">
+                            <tr>
+                              <!--     <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/park.png" alt="Connectivity">
 
                                 </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Blue Sapphire Mall - 4.5 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Blue Sapphire Mall - 4.5 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--        <td class="icon-cell">
+                            <tr>
+                              <!--        <td class="icon-cell">
 
                                    <img src="assets/images/location_advantages/icons/school.png" alt="subway">
 
                                 </td> -->
 
-                            <td class="text-cell">   
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Gaur Cricket Stadium - 4.8 kms
-                            </td>
-                          </tr>
-                        </table>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Gaur Cricket Stadium - 4.8 kms
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="tab-pane container fade" id="menu3">
-                      <div class="location-table">
-                        <table>
-                          <tr>
-                            <!--       <td class="icon-cell">
+                      <div class="tab-pane container fade" id="menu3">
+                        <div class="location-table">
+                          <table>
+                            <tr>
+                              <!--       <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/hospital.png" alt="Road">
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              R Systems - 3.5 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                R Systems - 3.5 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--     <td class="icon-cell">
+                            <tr>
+                              <!--     <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/hospital.png" alt="grass" />
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Kyndryl Solutions - 3.5 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Kyndryl Solutions - 3.5 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--             <td class="icon-cell">
+                            <tr>
+                              <!--             <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/park.png" alt="Connectivity">
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Artha Infratech - 3.5 kms
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Artha Infratech - 3.5 kms
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--            <td class="icon-cell">
+                            <tr>
+                              <!--            <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/school.png" alt="subway">
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Yotta Data Center Park - 7 kms
-                            </td>
-                          </tr>
-                        </table>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Yotta Data Center Park - 7 kms
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="tab-pane container fade" id="menu4">
-                      <div class="location-table">
-                        <table>
-                          <tr>
-                            <!--        <td class="icon-cell">
+                      <div class="tab-pane container fade" id="menu4">
+                        <div class="location-table">
+                          <table>
+                            <tr>
+                              <!--        <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/hospital.png" alt="Road">
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Gaur Cricket Stadium - 4.8 km
-                            </td>
-                          </tr>
-                        </table>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Gaur Cricket Stadium - 4.8 km
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="tab-pane container fade" id="menu5">
-                      <div class="location-table">
-                        <table>
-                          <tr>
-                            <!--     <td class="icon-cell">
+                      <div class="tab-pane container fade" id="menu5">
+                        <div class="location-table">
+                          <table>
+                            <tr>
+                              <!--     <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/hospital.png" alt="Road">
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Indira Gandhi International Airport
-                            </td>
-                          </tr>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Indira Gandhi International Airport
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <!--                <td class="icon-cell">
+                            <tr>
+                              <!--                <td class="icon-cell">
 
                                            <img src="assets/images/location_advantages/icons/hospital.png" alt="grass" />
 
                                         </td> -->
 
-                            <td class="text-cell">
-                              <img loading="lazy" decoding="async" src="assets/images/icons/location-dark.png" alt="location" class="location-icon" />
-                              Noida International Airport
-                            </td>
-                          </tr>
-                        </table>
+                              <td class="text-cell">
+                                <img
+                                  loading="lazy"
+                                  decoding="async"
+                                  src="assets/images/icons/location-dark.png"
+                                  alt="location"
+                                  class="location-icon"
+                                />
+                                Noida International Airport
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
+          <!-- Floor Plans Section -->
 
+          <section class="floor-plans-section" id="floor-plans-section">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/plans/bg.webp"
+              alt="Floor Plans Background"
+              class="floor-plans-bg"
+            />
 
-        <!-- Floor Plans Section -->
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/pattern.webp"
+              alt="Floor Plans Flower"
+              class="floor-plans-flower"
+            />
 
-        <section class="floor-plans-section" id="floor-plans-section">
-          <img loading="lazy" decoding="async" src="assets/images/plans/bg.webp" alt="Floor Plans Background" class="floor-plans-bg" />
+            <h2 class="floor-plans-subtitle h5">Floor plans</h2>
 
-          <img loading="lazy" decoding="async" src="assets/images/pattern.webp" alt="Floor Plans Flower" class="floor-plans-flower">
+            <h3 class="floor-plans-title h2">
+              PLANNED WITH INTELLIGENCE AT EVERY LEVEL.
+            </h3>
 
-          <h2 class="floor-plans-subtitle h5">Floor plans</h2>
-
-          <h3 class="floor-plans-title h2">
-            PLANNED WITH INTELLIGENCE AT EVERY LEVEL.
-          </h3>
-
-          <!-- <ul class="nav nav-pills floor-navs" id="pills-tab" role="tablist">
+            <!-- <ul class="nav nav-pills floor-navs" id="pills-tab" role="tablist">
 
               <li class="nav-item" role="presentation">
 
@@ -2136,8 +2794,8 @@
 
             </ul> -->
 
-          <div class="tab-content" id="pills-tabContent">
-            <!-- <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="tab-content" id="pills-tabContent">
+              <!-- <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 
                 <div class="container">
 
@@ -2244,163 +2902,257 @@
 
               </div> -->
 
-            <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
-              aria-labelledby="pills-profile-tab">
-              <div class="container">
-                <div class="floor-plans-content">
-                  <div class="plan-image-container">
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/typical.webp"
-                      data-plan="ground2" class="plan-image">
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/typical.webp"
-                        alt="Ground Floor Plan" class="img-fluid d-none d-md-block" />
-
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/typical.webp"
-                        alt="Ground Floor Plan" class="img-fluid d-md-none" />
-                    </a>
-
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/refuge.webp"
-                      data-plan="1st-2nd-Floor2" class="plan-image">
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/refuge.webp"
-                        alt="1st & 2nd Floor Plan" class="img-fluid d-none d-md-block" />
-
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/refuge.webp"
-                        alt="1st & 2nd Floor Plan" class="img-fluid d-md-none" />
-                    </a>
-
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/1bhk.webp"
-                      data-plan="1bhk2" class="plan-image">
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/1bhk.webp" alt="1 BHK Plan"
-                        class="img-fluid d-none d-md-block" />
-
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/1bhk.webp" alt="1 BHK Plan"
-                        class="img-fluid d-md-none" />
-                    </a>
-
-                    <a data-fancybox="plans" href="assets/images/plans/high_life2/new/2bhk.webp"
-                      data-plan="2bhk2" class="plan-image">
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/2bhk.webp" alt="2 BHK Plan"
-                        class="img-fluid d-none d-md-block" />
-
-                      <img loading="lazy" decoding="async" src="assets/images/plans/high_life2/new/2bhk.webp" alt="2 BHK Plan"
-                        class="img-fluid d-md-none" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper_control">
+              <div
+                class="tab-pane fade show active"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
                 <div class="container">
-                  <div class="swiper-container">
-                    <div class="swiper planSwiper2">
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-plan="ground2">
-                          <div class="plan-slide">Typical Floor Plan</div>
-                        </div>
+                  <div class="floor-plans-content">
+                    <div class="plan-image-container">
+                      <a
+                        data-fancybox="plans"
+                        href="assets/images/plans/high_life2/new/typical.webp"
+                        data-plan="ground2"
+                        class="plan-image"
+                      >
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/typical.webp"
+                          alt="Ground Floor Plan"
+                          class="img-fluid d-none d-md-block"
+                        />
 
-                        <div class="swiper-slide" data-plan="1st-2nd-Floor2">
-                          <div class="plan-slide">Refuge Floor Plan</div>
-                        </div>
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/typical.webp"
+                          alt="Ground Floor Plan"
+                          class="img-fluid d-md-none"
+                        />
+                      </a>
 
-                        <div class="swiper-slide" data-plan="1bhk2">
-                          <div class="plan-slide">1 BHK Unit Plan</div>
-                        </div>
+                      <a
+                        data-fancybox="plans"
+                        href="assets/images/plans/high_life2/new/refuge.webp"
+                        data-plan="1st-2nd-Floor2"
+                        class="plan-image"
+                      >
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/refuge.webp"
+                          alt="1st & 2nd Floor Plan"
+                          class="img-fluid d-none d-md-block"
+                        />
 
-                        <div class="swiper-slide" data-plan="2bhk2">
-                          <div class="plan-slide">2 BHK Unit Plan</div>
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/refuge.webp"
+                          alt="1st & 2nd Floor Plan"
+                          class="img-fluid d-md-none"
+                        />
+                      </a>
+
+                      <a
+                        data-fancybox="plans"
+                        href="assets/images/plans/high_life2/new/1bhk.webp"
+                        data-plan="1bhk2"
+                        class="plan-image"
+                      >
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/1bhk.webp"
+                          alt="1 BHK Plan"
+                          class="img-fluid d-none d-md-block"
+                        />
+
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/1bhk.webp"
+                          alt="1 BHK Plan"
+                          class="img-fluid d-md-none"
+                        />
+                      </a>
+
+                      <a
+                        data-fancybox="plans"
+                        href="assets/images/plans/high_life2/new/2bhk.webp"
+                        data-plan="2bhk2"
+                        class="plan-image"
+                      >
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/2bhk.webp"
+                          alt="2 BHK Plan"
+                          class="img-fluid d-none d-md-block"
+                        />
+
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/plans/high_life2/new/2bhk.webp"
+                          alt="2 BHK Plan"
+                          class="img-fluid d-md-none"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper_control">
+                  <div class="container">
+                    <div class="swiper-container">
+                      <div class="swiper planSwiper2">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" data-plan="ground2">
+                            <div class="plan-slide">Typical Floor Plan</div>
+                          </div>
+
+                          <div class="swiper-slide" data-plan="1st-2nd-Floor2">
+                            <div class="plan-slide">Refuge Floor Plan</div>
+                          </div>
+
+                          <div class="swiper-slide" data-plan="1bhk2">
+                            <div class="plan-slide">1 BHK Unit Plan</div>
+                          </div>
+
+                          <div class="swiper-slide" data-plan="2bhk2">
+                            <div class="plan-slide">2 BHK Unit Plan</div>
+                          </div>
                         </div>
                       </div>
+
+                      <div class="swiper-button-prev plan-nav-prev2"></div>
+
+                      <div class="swiper-button-next plan-nav-next2"></div>
                     </div>
-
-                    <div class="swiper-button-prev plan-nav-prev2"></div>
-
-                    <div class="swiper-button-next plan-nav-next2"></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Contact Us Section -->
+          <!-- Contact Us Section -->
 
-        <section class="contact-us-section" id="contact-us">
-          <img loading="lazy" decoding="async" src="assets/images/contact-us/bg.webp" alt="Contact Us Background" class="contact-us-bg" />
+          <section class="contact-us-section" id="contact-us">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/contact-us/bg.webp"
+              alt="Contact Us Background"
+              class="contact-us-bg"
+            />
 
-          <!-- <div class="contact-us-overlay"></div> -->
+            <!-- <div class="contact-us-overlay"></div> -->
 
-          <!-- <img src="assets/images/pattern1.png" alt="Flower Right" class="contact-us-flower-right"> -->
+            <!-- <img src="assets/images/pattern1.png" alt="Flower Right" class="contact-us-flower-right"> -->
 
-          <div class="container">
-            <h2 class="contact-us-subtitle h5">Contact Us</h2>
+            <div class="container">
+              <h2 class="contact-us-subtitle h5">Contact Us</h2>
 
-            <p class="contact-us-desc">
-              Discover a home where intelligent technology, thoughtful design
-              and effortless comfort come together.
-            </p>
+              <p class="contact-us-desc">
+                Discover a home where intelligent technology, thoughtful design
+                and effortless comfort come together.
+              </p>
 
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="contact-form-parent">
-                  <div class="contact-form-content">
-                    <div class="contact-form">
-                      <div class="row mx_-40">
-                        <div class="col-md-4 px_40 mb-3">
-                          <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name" id="qSenderName" required />
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="contact-form-parent">
+                    <div class="contact-form-content">
+                      <div class="contact-form">
+                        <div class="row mx_-40">
+                          <div class="col-md-4 px_40 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Name"
+                                id="qSenderName"
+                                required
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-4 px_40 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Mail ID"
+                                id="qEmailID"
+                                required
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-4 px_40 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="tel"
+                                class="form-control"
+                                placeholder="Phone Number"
+                                id="qMobileNo"
+                                required
+                              />
+                            </div>
                           </div>
                         </div>
 
-                        <div class="col-md-4 px_40 mb-3">
-                          <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Mail ID" id="qEmailID" required />
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <textarea
+                                class="form-control"
+                                rows="1"
+                                placeholder="Message"
+                                id="qMessage"
+                                required
+                              ></textarea>
+                            </div>
                           </div>
                         </div>
 
-                        <div class="col-md-4 px_40 mb-3">
-                          <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Phone Number" id="qMobileNo" required />
-                          </div>
+                        <div class="text-center mt-2">
+                          <button
+                            type="submit"
+                            class="submit-btn"
+                            id="SubmitQuery"
+                          >
+                            Submit Now
+                          </button>
                         </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <textarea class="form-control" rows="1" placeholder="Message" id="qMessage"
-                              required></textarea>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="text-center mt-2">
-                        <button type="submit" class="submit-btn" id="SubmitQuery">
-                          Submit Now
-                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="row justify-content-center">
-              <div class="col-lg-10">
-                <div class="contact-info-container">
-                  <div class="row contact-info-row">
-                    <div class="col-md-6">
-                      <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                          <i class="bi bi-telephone-fill"></i>
-                        </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <div class="contact-info-container">
+                    <div class="row contact-info-row">
+                      <div class="col-md-6">
+                        <div class="contact-info-item">
+                          <div class="contact-info-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                          </div>
 
-                        <div class="contact-info-text">
-                          <a href="tel:+919582600140">
-                            Call: +91-9582-600-140</a>
+                          <div class="contact-info-text">
+                            <a href="tel:+919582600140">
+                              Call: +91-9582-600-140</a
+                            >
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <!-- <div class="col-md-4">
+                      <!-- <div class="col-md-4">
 
                       <div class="contact-info-item">
 
@@ -2420,19 +3172,23 @@
 
                     </div> -->
 
-                    <div class="col-md-6">
-                      <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                          <i class="bi bi-geo-alt-fill"></i>
-                        </div>
+                      <div class="col-md-6">
+                        <div class="contact-info-item">
+                          <div class="contact-info-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                          </div>
 
-                        <div class="contact-info-text">
-                          <a target="_blank" href="https://maps.app.goo.gl/futH4q9qMhYZ4x5a9">SYNQ Location Map</a>
+                          <div class="contact-info-text">
+                            <a
+                              target="_blank"
+                              href="https://maps.app.goo.gl/futH4q9qMhYZ4x5a9"
+                              >SYNQ Location Map</a
+                            >
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <!-- <div class="col-md-4">
+                      <!-- <div class="col-md-4">
 
                       <div class="contact-info-item">
 
@@ -2447,129 +3203,166 @@
                       </div>
 
                     </div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Footer Section -->
-
-        <section class="footer-section" id="footer-section">
-          <img loading="lazy" decoding="async" src="assets/images/footer/bg.webp" alt="Footer Background" class="footer-bg" />
-
-          <div class="footer-overlay"></div>
-
-          <!-- <img src="assets/images/pattern2.png" alt="Footer Flower" class="footer-flower"> -->
-
-          <div class="container-fluid px_60 px_sm_20">
-            <h2 class="footer-title">Powered by a trusted Joint Venture</h2>
-
-            <div class="row justify-content-center mx_-80">
-              <div class="col-lg-12 px_80">
-                <div class="footer-content">
-                  <div class="row mx_-80 mx_lg_-40">
-                    <div class="col-md-6 px_80 px_lg_40 left_col">
-                      <div class="footer-company">
-                        <img loading="lazy" decoding="async" src="assets/images/footer/great_value.png" alt="Great Value" class="footer-logo" />
-
-                        <p class="footer-description">
-                          Founded in 1970, Great Value Realty (GVR) began in
-                          glassware and packaging, later expanding into food
-                          processing, tech solutions, and real estate. Known
-                          for trust and innovation, GVR has led impactful
-                          initiatives like E-Gram Samiti and E-Land Records.
-                          Its real estate ventures, including Great Value Mall
-                          and residential projects like Sharanam and Vilasa,
-                          reflect a commitment to quality living. Today, GVR
-                          continues to drive progress through strategic
-                          partnerships and forward-thinking solutions across
-                          industries.
-                        </p>
-                      </div>
-                    </div>
-
-                    <!-- <div class="col-md-2 d-none d-md-flex justify-content-center">
-
-                      <div class="footer-divider"></div>
-
-                    </div> -->
-
-                    <!-- <div class="d-md-none col-12">
-
-                      <div class="footer-divider"></div>
-
-                    </div> -->
-
-                    <div class="col-md-6 px_80 px_lg_40 right_col">
-                      <div class="footer-company">
-                        <img loading="lazy" decoding="async" src="assets/images/footer/yatharth.png" alt="Yatharth" class="footer-logo2" />
-
-                        <p class="footer-description">
-                          Sanskar Realty is an extension of the Yatharth Group
-                          of Hospitals’ legacy, a name rooted in care, trust,
-                          and commitment since 2008. Over the years, Yatharth
-                          Hospitals has grown into the third-largest
-                          public-listed hospital chain in North India,
-                          operating seven hospitals across four states and
-                          touching countless lives with compassionate care.
-                          Building on this foundation of trust and excellence,
-                          Sanskar Realty embarks on a new chapter, focusing on
-                          strategic and long-term real estate investments with
-                          a vision to build lasting value and foster growth
-                          beyond healthcare.
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="copyright-section">
-            <p class="copyright-text">
-              © Copyright 2026 NBCC Aspire SYNQ. All Right Reserved.
-            </p>
+          <!-- Footer Section -->
 
-            <p class="disclaimer-text">
-              <a href="disclaimer.html" target="_blank" class="gtf-link">Disclaimer & Privacy Policy</a>
-              | Managed by
-              <a href="https://gtftechnologies.com/" target="_blank" class="gtf-link">GTF Technologies</a>
-            </p>
-          </div>
+          <section class="footer-section" id="footer-section">
+            <img
+              loading="lazy"
+              decoding="async"
+              src="assets/images/footer/bg.webp"
+              alt="Footer Background"
+              class="footer-bg"
+            />
 
-          <div class="disclaimer">
+            <div class="footer-overlay"></div>
+
+            <!-- <img src="assets/images/pattern2.png" alt="Footer Flower" class="footer-flower"> -->
+
             <div class="container-fluid px_60 px_sm_20">
+              <h2 class="footer-title">Powered by a trusted Joint Venture</h2>
+
               <div class="row justify-content-center mx_-80">
                 <div class="col-lg-12 px_80">
-                  <div class="disclaimer-content">
-                    <div class="disclaimer-logos">
-                      <img loading="lazy" decoding="async" src="assets/images/footer/nbcc.png" alt="NBCC" class="disclaimer-logo" />
+                  <div class="footer-content">
+                    <div class="row mx_-80 mx_lg_-40">
+                      <div class="col-md-6 px_80 px_lg_40 left_col">
+                        <div class="footer-company">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/footer/great_value.png"
+                            alt="Great Value"
+                            class="footer-logo"
+                          />
 
-                      <img loading="lazy" decoding="async" src="assets/images/footer/aspire.png" alt="Aspire" class="disclaimer-logo" />
-                    </div>
+                          <p class="footer-description">
+                            Founded in 1970, Great Value Realty (GVR) began in
+                            glassware and packaging, later expanding into food
+                            processing, tech solutions, and real estate. Known
+                            for trust and innovation, GVR has led impactful
+                            initiatives like E-Gram Samiti and E-Land Records.
+                            Its real estate ventures, including Great Value Mall
+                            and residential projects like Sharanam and Vilasa,
+                            reflect a commitment to quality living. Today, GVR
+                            continues to drive progress through strategic
+                            partnerships and forward-thinking solutions across
+                            industries.
+                          </p>
+                        </div>
+                      </div>
 
-                    <div class="disclaimer-text-container">
-                      <p class="disclaimer-para">
-                        Authorised marketing partner for Aspire Dream Valley
-                        III, managed by NBCC on behalf of the Hon’ble Supreme
-                        Court-appointed Court Receiver. | *T&C Apply
-                      </p>
+                      <!-- <div class="col-md-2 d-none d-md-flex justify-content-center">
+
+                      <div class="footer-divider"></div>
+
+                    </div> -->
+
+                      <!-- <div class="d-md-none col-12">
+
+                      <div class="footer-divider"></div>
+
+                    </div> -->
+
+                      <div class="col-md-6 px_80 px_lg_40 right_col">
+                        <div class="footer-company">
+                          <img
+                            loading="lazy"
+                            decoding="async"
+                            src="assets/images/footer/yatharth.png"
+                            alt="Yatharth"
+                            class="footer-logo2"
+                          />
+
+                          <p class="footer-description">
+                            Sanskar Realty is an extension of the Yatharth Group
+                            of Hospitals’ legacy, a name rooted in care, trust,
+                            and commitment since 2008. Over the years, Yatharth
+                            Hospitals has grown into the third-largest
+                            public-listed hospital chain in North India,
+                            operating seven hospitals across four states and
+                            touching countless lives with compassionate care.
+                            Building on this foundation of trust and excellence,
+                            Sanskar Realty embarks on a new chapter, focusing on
+                            strategic and long-term real estate investments with
+                            a vision to build lasting value and foster growth
+                            beyond healthcare.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  </div>
 
-  <div class="header-buttons">
-    <!-- <button class="btn btn-video">
+            <div class="copyright-section">
+              <p class="copyright-text">
+                © Copyright 2026 NBCC Aspire SYNQ. All Right Reserved.
+              </p>
+
+              <p class="disclaimer-text">
+                <a href="disclaimer.html" target="_blank" class="gtf-link"
+                  >Disclaimer & Privacy Policy</a
+                >
+                | Managed by
+                <a
+                  href="https://gtftechnologies.com/"
+                  target="_blank"
+                  class="gtf-link"
+                  >GTF Technologies</a
+                >
+              </p>
+            </div>
+
+            <div class="disclaimer">
+              <div class="container-fluid px_60 px_sm_20">
+                <div class="row justify-content-center mx_-80">
+                  <div class="col-lg-12 px_80">
+                    <div class="disclaimer-content">
+                      <div class="disclaimer-logos">
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/footer/nbcc.png"
+                          alt="NBCC"
+                          class="disclaimer-logo"
+                        />
+
+                        <img
+                          loading="lazy"
+                          decoding="async"
+                          src="assets/images/footer/aspire.png"
+                          alt="Aspire"
+                          class="disclaimer-logo"
+                        />
+                      </div>
+
+                      <div class="disclaimer-text-container">
+                        <p class="disclaimer-para">
+                          Authorised marketing partner for Aspire Dream Valley
+                          III, managed by NBCC on behalf of the Hon’ble Supreme
+                          Court-appointed Court Receiver. | *T&C Apply
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="header-buttons">
+      <!-- <button class="btn btn-video">
 
       <span>Video</span>
 
@@ -2577,47 +3370,60 @@
 
     </button> -->
 
-    <button class="btn btn-brochure" data-bs-toggle="modal" data-bs-target="#brochureModal">
-      <span>Brochure</span>
+      <button
+        class="btn btn-brochure"
+        data-bs-toggle="modal"
+        data-bs-target="#brochureModal"
+      >
+        <span>Brochure</span>
 
-      <i class="bi bi-download"></i>
-    </button>
-  </div>
+        <i class="bi bi-download"></i>
+      </button>
+    </div>
 
-  <!-- enquire btn -->
+    <!-- enquire btn -->
 
-  <div class="enquire_fixed_btn d-md-none">
-    <div class="side-b whatsapp-button">
-      <a href="https://api.whatsapp.com/send?phone=+917777079770&amp;text=Hello, Looking for SYNQ, Greater Noida. Get in touch with me my name is"
-        target="_blank" class="btn">
-        WhatsApp
+    <div class="enquire_fixed_btn d-md-none">
+      <div class="side-b whatsapp-button">
+        <a
+          href="https://api.whatsapp.com/send?phone=+917777079770&amp;text=Hello, Looking for SYNQ, Greater Noida. Get in touch with me my name is"
+          target="_blank"
+          class="btn"
+        >
+          WhatsApp
+        </a>
+      </div>
+
+      <div class="side-b down-load-brochure">
+        <a href="tel:+919582600140" class="btn"> Call Now </a>
+      </div>
+
+      <div class="side-b get-in-touch">
+        <a class="btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+
+    <div class="call-section d-none d-md-block zoom-in-zoom-out">
+      <a href="tel:+919582600140">
+        <img
+          loading="lazy"
+          decoding="async"
+          class="img-fluid"
+          src="assets/images/phone.png"
+          alt=""
+        />
       </a>
     </div>
 
-    <div class="side-b down-load-brochure">
-      <a href="tel:+919582600140" class="btn"> Call Now </a>
-    </div>
-
-    <div class="side-b get-in-touch">
-      <a class="btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-        Get In Touch
-      </a>
-    </div>
-  </div>
-
-  <div class="call-section d-none d-md-block zoom-in-zoom-out">
-    <a href="tel:+919582600140">
-      <img loading="lazy" decoding="async" class="img-fluid" src="assets/images/phone.png" alt="" />
-    </a>
-  </div>
-
-  <!-- <div class="whatsapp-section d-none d-md-block zoom-in-zoom-out">
+    <!-- <div class="whatsapp-section d-none d-md-block zoom-in-zoom-out">
 
     <a href="https://api.whatsapp.com/send?phone=+91 &amp;text=Hello, Looking for SYNQ Tech Zone IV, Greater Noida (W) Get in touch with me my name is" target="_blank"> <img class="img-fluid" src="assets/images/whatsapp.png" alt=""> </a>
 
 </div> -->
 
-  <!-- <div class="hero-buttons">
+    <!-- <div class="hero-buttons">
 
   <button class="hero-btn d-none d-md-block" data-bs-toggle="modal" data-bs-target="#enquiryModal">ENQUIRE NOW</button>
 
@@ -2629,291 +3435,403 @@
 
 </div> -->
 
-  <!-- <div class="whatsapp-section d-none d-md-block zoom-in-zoom-out">-->
+    <!-- <div class="whatsapp-section d-none d-md-block zoom-in-zoom-out">-->
 
-  <!--  <a href="https://api.whatsapp.com/send?phone=917777079770&amp;text=Hello, Looking for SYNQ Dream Valley Tech Zone IV, Greater Noida (W) Get in touch with me my name is" target="_blank"> -->
+    <!--  <a href="https://api.whatsapp.com/send?phone=917777079770&amp;text=Hello, Looking for SYNQ Dream Valley Tech Zone IV, Greater Noida (W) Get in touch with me my name is" target="_blank"> -->
 
-  <!--    <img class="img-fluid" src="assets/images/whatsapp.png" alt=""> -->
+    <!--    <img class="img-fluid" src="assets/images/whatsapp.png" alt=""> -->
 
-  <!--  </a>-->
+    <!--  </a>-->
 
-  <!--</div>-->
+    <!--</div>-->
 
-  <div class="hero-buttons d-none d-md-flex">
-    <button class="hero-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-      ENQUIRE NOW
-    </button>
+    <div class="hero-buttons d-none d-md-flex">
+      <button
+        class="hero-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#enquiryModal"
+      >
+        ENQUIRE NOW
+      </button>
 
-    <!-- <div class="hero-btn-divider d-none d-md-block"></div>
+      <!-- <div class="hero-btn-divider d-none d-md-block"></div>
 
     <a class="hero-btn d-none d-md-block" href="https://api.whatsapp.com/send?phone=+917777079770&amp;text=Hello, Looking for Eternia, Greater Noida (W) Get in touch with me my name is" target="_blank">Whatsapp</a> -->
-  </div>
+    </div>
 
-  <!-- Form Modal -->
+    <!-- Form Modal -->
 
-  <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-inner">
-          <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="bi bi-x"></i>
-          </button>
+    <div
+      class="modal fade"
+      id="enquiryModal"
+      tabindex="-1"
+      aria-labelledby="enquiryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-inner">
+            <button
+              type="button"
+              class="modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x"></i>
+            </button>
 
-          <img loading="lazy" decoding="async" class="img-fluid popup-logo" src="assets/images/logo/logo_dark.svg" alt="" />
+            <img
+              loading="lazy"
+              decoding="async"
+              class="img-fluid popup-logo"
+              src="assets/images/logo/logo_dark.svg"
+              alt=""
+            />
 
-          <h3 class="modal-title">Have Questions? Ask Away!</h3>
+            <h3 class="modal-title">Have Questions? Ask Away!</h3>
 
-          <div class="enquiry-form">
-            <div class="row">
-              <div class="col-md-4 mb-3">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Name" id="qSenderName1" required />
+            <div class="enquiry-form">
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name"
+                      id="qSenderName1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Mail ID"
+                      id="qEmailID1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Phone Number"
+                      id="qMobileNo1"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div class="col-md-4 mb-3">
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Mail ID" id="qEmailID1" required />
-                </div>
+              <div class="form-group mb-4">
+                <textarea
+                  class="form-control"
+                  rows="2"
+                  placeholder="Message"
+                  id="qMessage1"
+                  required
+                ></textarea>
               </div>
 
-              <div class="col-md-4 mb-3">
-                <div class="form-group">
-                  <input type="tel" class="form-control" placeholder="Phone Number" id="qMobileNo1" required />
-                </div>
+              <div class="text-center">
+                <button type="submit" class="submit-btn" id="SubmitQuery1">
+                  Submit Now
+                </button>
               </div>
-            </div>
-
-            <div class="form-group mb-4">
-              <textarea class="form-control" rows="2" placeholder="Message" id="qMessage1" required></textarea>
-            </div>
-
-            <div class="text-center">
-              <button type="submit" class="submit-btn" id="SubmitQuery1">
-                Submit Now
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- brochure Modal -->
+    <!-- brochure Modal -->
 
-  <div class="modal fade" id="brochureModal" tabindex="-1" aria-labelledby="brochureModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-inner">
-          <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="bi bi-x"></i>
-          </button>
+    <div
+      class="modal fade"
+      id="brochureModal"
+      tabindex="-1"
+      aria-labelledby="brochureModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-inner">
+            <button
+              type="button"
+              class="modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x"></i>
+            </button>
 
-          <img loading="lazy" decoding="async" class="img-fluid popup-logo" src="assets/images/logo/logo_dark.svg" alt="" />
+            <img
+              loading="lazy"
+              decoding="async"
+              class="img-fluid popup-logo"
+              src="assets/images/logo/logo_dark.svg"
+              alt=""
+            />
 
-          <h3 class="modal-title">Download Brochure</h3>
+            <h3 class="modal-title">Download Brochure</h3>
 
-          <div class="enquiry-form">
-            <div class="row">
-              <div class="col-md-4 mb-md-3">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Name" id="qSenderName2" required />
+            <div class="enquiry-form">
+              <div class="row">
+                <div class="col-md-4 mb-md-3">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Name"
+                      id="qSenderName2"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-md-3">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Mail ID"
+                      id="qEmailID2"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-4 mb-md-3">
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Phone Number"
+                      id="qMobileNo2"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div class="col-md-4 mb-md-3">
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Mail ID" id="qEmailID2" required />
-                </div>
+              <div class="form-group mb-4">
+                <textarea
+                  class="form-control"
+                  rows="2"
+                  placeholder="Message"
+                  id="qMessage2"
+                  required
+                ></textarea>
               </div>
 
-              <div class="col-md-4 mb-md-3">
-                <div class="form-group">
-                  <input type="tel" class="form-control" placeholder="Phone Number" id="qMobileNo2" required />
-                </div>
+              <div class="text-center">
+                <button type="submit" class="submit-btn" id="SubmitQuery2">
+                  Submit Now
+                </button>
               </div>
-            </div>
-
-            <div class="form-group mb-4">
-              <textarea class="form-control" rows="2" placeholder="Message" id="qMessage2" required></textarea>
-            </div>
-
-            <div class="text-center">
-              <button type="submit" class="submit-btn" id="SubmitQuery2">
-                Submit Now
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- jQuery -->
+    <!-- jQuery -->
 
-  <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- Bootstrap JS Bundle with Popper -->
+    <!-- Bootstrap JS Bundle with Popper -->
 
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
-  <!-- Swiper JS -->
+    <!-- Swiper JS -->
 
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
 
-  <!-- GSAP -->
+    <!-- GSAP -->
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    ></script>
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    ></script>
 
-  <script defer src="js/ScrollSmoother.min.js"></script>
+    <script defer src="js/ScrollSmoother.min.js"></script>
 
-  <script defer src="js/queryform.min.ssl.js"></script>
+    <script defer src="js/queryform.min.ssl.js"></script>
 
-  <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"
+    ></script>
 
-  <script defer src="js/custom-animations.js"></script>
+    <script defer src="js/custom-animations.js"></script>
 
-  <script>
-    // Lazy images change section heights when they arrive; keep GSAP trigger points accurate
-    (function () {
-      var timer;
-      function refresh() {
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-          if (window.ScrollTrigger) ScrollTrigger.refresh();
-        }, 200);
-      }
-      document.querySelectorAll('img[loading="lazy"]').forEach(function (img) {
-        if (!img.complete) img.addEventListener("load", refresh, { once: true });
+    <script>
+      // Lazy images change section heights when they arrive; keep GSAP trigger points accurate
+      (function () {
+        var timer;
+        function refresh() {
+          clearTimeout(timer);
+          timer = setTimeout(function () {
+            if (window.ScrollTrigger) ScrollTrigger.refresh();
+          }, 200);
+        }
+        document
+          .querySelectorAll('img[loading="lazy"]')
+          .forEach(function (img) {
+            if (!img.complete)
+              img.addEventListener("load", refresh, { once: true });
+          });
+      })();
+    </script>
+
+    <script type="text/javascript" language="javascript">
+      window.addEventListener("load", function () {
+        var versionUpdate = new Date().getTime();
+
+        var script = document.createElement("script");
+
+        script.type = "text/javascript";
+
+        script.src =
+          "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" +
+          versionUpdate;
+
+        document.body.appendChild(script);
       });
-    })();
-  </script>
+    </script>
 
-  <script type="text/javascript" language="javascript">
-    window.addEventListener("load", function () {
-      var versionUpdate = new Date().getTime();
+    <script>
+      var AgentInfo = {
+        vAgentID: "4900",
 
-      var script = document.createElement("script");
+        vProject: "SYNQ Greater Noida",
 
-      script.type = "text/javascript";
+        vURL: "https://highlife.greatvaluerealty.com/",
 
-      script.src =
-        "https://api2.gtftech.com/scripts/queryform.min.ssl.js?v=" +
-        versionUpdate;
-
-      document.body.appendChild(script);
-    });
-  </script>
-
-  <script>
-    var AgentInfo = {
-      vAgentID: "4900",
-
-      vProject: "SYNQ Greater Noida",
-
-      vURL: "https://highlife.greatvaluerealty.com/",
-
-      thankspageurl: "https://highlife.greatvaluerealty.com/thanks.htm",
-    };
-
-    //Needs to be duplicate in the case of multiple forms on the same page
-
-    //--------------------------------------------------------------------------------------//
-
-    window.addEventListener("DOMContentLoaded", function () {
-    $("#preferedtime").hide();
-
-    $("#SubmitQuery").click(function () {
-      var FormInfo = {
-        SenderControlID: "qSenderName",
-
-        SenderControlMobileID: "qMobileNo",
-
-        SenderControlEmailID: "qEmailID",
-
-        SenderControlMsgID: "qMessage",
+        thankspageurl: "https://highlife.greatvaluerealty.com/thanks.htm",
       };
 
-      SubmitQueryData(AgentInfo, FormInfo);
-    });
+      //Needs to be duplicate in the case of multiple forms on the same page
 
-    $("#SubmitQuery1").click(function () {
-      var FormInfo = {
-        SenderControlID: "qSenderName1",
+      //--------------------------------------------------------------------------------------//
 
-        SenderControlMobileID: "qMobileNo1",
+      window.addEventListener("DOMContentLoaded", function () {
+        $("#preferedtime").hide();
 
-        SenderControlEmailID: "qEmailID1",
+        $("#SubmitQuery").click(function () {
+          var FormInfo = {
+            SenderControlID: "qSenderName",
 
-        SenderControlMsgID: "qMessage1",
-      };
+            SenderControlMobileID: "qMobileNo",
 
-      SubmitQueryData(AgentInfo, FormInfo);
-    });
+            SenderControlEmailID: "qEmailID",
 
-    $("#SubmitQuery2").click(function () {
-      var FormInfo = {
-        SenderControlID: "qSenderName2",
+            SenderControlMsgID: "qMessage",
+          };
 
-        SenderControlMobileID: "qMobileNo2",
+          SubmitQueryData(AgentInfo, FormInfo);
+        });
 
-        SenderControlEmailID: "qEmailID2",
+        $("#SubmitQuery1").click(function () {
+          var FormInfo = {
+            SenderControlID: "qSenderName1",
 
-        SenderControlMsgID: "qMessage2",
-      };
+            SenderControlMobileID: "qMobileNo1",
 
-      SubmitQueryData(AgentInfo, FormInfo);
-    });
-    });
-  </script>
+            SenderControlEmailID: "qEmailID1",
 
-  <script>
-    (function () {
-      const previewLink = document.querySelector('.highlight-preview-link');
-      const previewImage = document.querySelector('.highlights-image');
-      const watermark = previewLink ? previewLink.querySelector('.watermark-label') : null;
-      const rows = document.querySelectorAll('.highlight-row');
+            SenderControlMsgID: "qMessage1",
+          };
 
-      if (!previewLink || !previewImage || !rows.length) return;
+          SubmitQueryData(AgentInfo, FormInfo);
+        });
 
-      function setHighlightPreview(row) {
-        const imageSrc = row.dataset.image;
-        const label = row.dataset.label || '';
-        if (!imageSrc) return;
+        $("#SubmitQuery2").click(function () {
+          var FormInfo = {
+            SenderControlID: "qSenderName2",
 
-        previewLink.setAttribute('href', imageSrc);
-        previewImage.setAttribute('src', imageSrc);
-        previewImage.setAttribute('alt', 'Highlight ' + imageSrc.split('/').pop().replace(/\.(png|webp)$/i, ''));
+            SenderControlMobileID: "qMobileNo2",
 
-        if (watermark) {
-          watermark.textContent = label;
-          watermark.style.display = label ? 'inline-flex' : 'none';
+            SenderControlEmailID: "qEmailID2",
+
+            SenderControlMsgID: "qMessage2",
+          };
+
+          SubmitQueryData(AgentInfo, FormInfo);
+        });
+      });
+    </script>
+
+    <script>
+      (function () {
+        const previewLink = document.querySelector(".highlight-preview-link");
+        const previewImage = document.querySelector(".highlights-image");
+        const watermark = previewLink
+          ? previewLink.querySelector(".watermark-label")
+          : null;
+        const rows = document.querySelectorAll(".highlight-row");
+
+        if (!previewLink || !previewImage || !rows.length) return;
+
+        function setHighlightPreview(row) {
+          const imageSrc = row.dataset.image;
+          const label = row.dataset.label || "";
+          if (!imageSrc) return;
+
+          previewLink.setAttribute("href", imageSrc);
+          previewImage.setAttribute("src", imageSrc);
+          previewImage.setAttribute(
+            "alt",
+            "Highlight " +
+              imageSrc
+                .split("/")
+                .pop()
+                .replace(/\.(png|webp)$/i, ""),
+          );
+
+          if (watermark) {
+            watermark.textContent = label;
+            watermark.style.display = label ? "inline-flex" : "none";
+          }
+
+          rows.forEach((item) => {
+            item.classList.toggle("active", item === row);
+          });
         }
 
-        rows.forEach((item) => {
-          item.classList.toggle('active', item === row);
+        rows.forEach((row) => {
+          row.addEventListener("mouseenter", function () {
+            setHighlightPreview(row);
+          });
+
+          row.addEventListener("focusin", function () {
+            setHighlightPreview(row);
+          });
+
+          row.addEventListener("click", function () {
+            setHighlightPreview(row);
+          });
         });
-      }
 
-      rows.forEach((row) => {
-        row.addEventListener('mouseenter', function () {
-          setHighlightPreview(row);
-        });
-
-        row.addEventListener('focusin', function () {
-          setHighlightPreview(row);
-        });
-
-        row.addEventListener('click', function () {
-          setHighlightPreview(row);
-        });
-      });
-
-      setHighlightPreview(rows[0]);
-    })();
-  </script>
-</body>
-
+        setHighlightPreview(rows[0]);
+      })();
+    </script>
+  </body>
 </html>
